@@ -16,6 +16,8 @@ public interface IUserService {
 
   User modifyUser(User user);
 
+  User modifyUserWithPasswordUpdate(User user);
+
   User findUserById(Integer id);
 
   User deleteUser(String email);

@@ -19,8 +19,13 @@ public class UserController {
   PasswordEncoder passwordEncoder;
 
   @GetMapping("/users/{id}")
-  public User getUserbyId(@PathVariable int id) {
+  public User getUserById(@PathVariable int id) {
     return userService.findUserById(id);
+  }
+
+  @GetMapping("/users")
+  public User getUserByEmail(@RequestParam String email) {
+    return userService.findUserByEmail(email);
   }
 
   @PostMapping(value = "/users")
@@ -54,6 +59,17 @@ public class UserController {
       response.setStatus(409);
     } else {
       logger.info("User successfully modified "+user.toString());
+      response.setStatus(200);
+    }
+  }
+
+  @PutMapping(value = "/users/pwd")
+  public void modifyUserWithPasswordUpdate(@RequestBody User user, HttpServletResponse response){
+    if (userService.modifyUserWithPasswordUpdate(user).getId() == null) {
+      logger.info("User unknown "+user.toString());
+      response.setStatus(409);
+    } else {
+      logger.info("User and/or password successfully modified "+user.toString());
       response.setStatus(200);
     }
   }

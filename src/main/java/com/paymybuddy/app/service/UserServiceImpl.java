@@ -48,6 +48,24 @@ public class UserServiceImpl implements IUserService {
     }
     User userRetrieved = userRepository.findUserByEmail(user.getEmail());
     user.setId(userRetrieved.getId());
+    userRepository.save(user);
+    logger.debug("user modified");
+    return user;
+  }
+
+  /**
+   * @inheritDoc
+   */
+  @Override
+  public User modifyUserWithPasswordUpdate(User user) {
+    logger.debug("modifying user");
+    String mail = user.getEmail();
+    if(userRepository.findUserByEmail(mail)==null){
+      logger.debug("user not registered");
+      return new User();
+    }
+    User userRetrieved = userRepository.findUserByEmail(user.getEmail());
+    user.setId(userRetrieved.getId());
     user.setPassword(passwordEncoder.encode(user.getPassword()));
     userRepository.save(user);
     logger.debug("user modified");

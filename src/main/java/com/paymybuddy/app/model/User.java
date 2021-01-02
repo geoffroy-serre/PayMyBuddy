@@ -129,4 +129,20 @@ public class User {
   public void setTreasury(Double treasury) {
     this.treasury = treasury;
   }
+
+  @Override
+  public String toString() {
+    return "User{" +
+            "firstName='" + firstName + '\'' +
+            ", email='" + email + '\'' +
+            ", password='" + password + '\'' +
+            ", lastName='" + lastName + '\'' +
+            ", address='" + address + '\'' +
+            ", city='" + city + '\'' +
+            ", zip='" + zip + '\'' +
+            ", phone='" + phone + '\'' +
+            ", birthDate=" + birthDate +
+            ", treasury=" + treasury +
+            '}';
+  }
 }
