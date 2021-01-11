@@ -11,13 +11,14 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
   @Override
   public void configure(HttpSecurity http) throws Exception {
     http.csrf().disable().authorizeRequests()
-            .antMatchers("/").permitAll()
+            .antMatchers("/*").permitAll()
             .antMatchers(HttpMethod.POST,"/users").permitAll()
             .antMatchers(HttpMethod.PUT,"/users*").permitAll()
             .antMatchers(HttpMethod.POST,"/moneyTransaction/*").permitAll()
             .antMatchers(HttpMethod.PUT,"/users/pwd*").permitAll()
             .antMatchers(HttpMethod.DELETE,"/users*").permitAll()
-            .antMatchers(HttpMethod.GET,"/users*").permitAll()
+            .antMatchers(HttpMethod.GET,"/users/*").permitAll()
+            .antMatchers(HttpMethod.GET,"/moneyTransaction*").permitAll()
 
             .anyRequest().authenticated();
   }

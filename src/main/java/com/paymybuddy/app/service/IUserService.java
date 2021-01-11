@@ -1,6 +1,5 @@
 package com.paymybuddy.app.service;
 
-
 import com.paymybuddy.app.model.User;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -8,19 +7,29 @@ import org.springframework.transaction.annotation.Transactional;
 public interface IUserService {
   /**
    * Add a user. Verify is the user is already registered by checking existing email.
-   * Return new User if already registered.
+   * Return false if already registered.
    * @param user User
-   * @return user User
+   * @return boolean
    */
-  User addUser(User user);
+  boolean addUser(User user);
 
-  User modifyUser(User user);
+  /**
+   * Modify existing user.
+   * @param user User
+   * @return boolean
+   */
+  void saveUser(User user);
 
-  User modifyUserWithPasswordUpdate(User user);
 
   User findUserById(Integer id);
 
-  User deleteUser(String email);
+  /**
+   * Delete a user using email to find him.
+   * Return true if delete succeed. False if no user found with the provided email.
+   * @param email String
+   * @return boolean
+   */
+  boolean deleteUser(String email);
 
   User findUserByEmail(String email);
 }

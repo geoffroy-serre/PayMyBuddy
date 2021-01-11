@@ -30,48 +30,38 @@ public class UserController {
 
   @PostMapping(value = "/users")
   public void addUser(@RequestBody User user, HttpServletResponse response) {
-    if (userService.addUser(user).getId() == null) {
-      logger.info("Email already known "+user.getEmail());
+    if (!userService.addUser(user)) {
+      logger.info("Email already known " + user.getEmail());
       response.setStatus(409);
     } else {
-      logger.info("User registered sucessfully "+user.toString());
+      logger.info("User registered sucessfully " + user.toString());
       response.setStatus(200);
     }
   }
 
   @DeleteMapping(value = "/users")
   public void deleteUser(@RequestParam String email, HttpServletResponse response) {
-    if (userService.findUserByEmail(email) != null) {
-      logger.info("Delete user with email "+email);
-      userService.deleteUser(email);
+    if (userService.deleteUser(email)) {
+      logger.info("Delete user with email " + email);
       response.setStatus(200);
     } else {
-      logger.info("Email unknown "+email);
+      logger.info("Email unknown " + email);
       response.setStatus(409);
     }
 
   }
 
   @PutMapping(value = "/users")
-  public void modifyUser(@RequestBody User user, HttpServletResponse response){
-    if (userService.modifyUser(user).getId() == null) {
-      logger.info("User unknown "+user.toString());
-      response.setStatus(409);
-    } else {
-      logger.info("User successfully modified "+user.toString());
-      response.setStatus(200);
-    }
+  public void modifyUser(@RequestBody User user, HttpServletResponse response) {
+    userService.saveUser(user);
+    logger.info("User successfully modified " + user.toString());
+    response.setStatus(200);
+
   }
 
   @PutMapping(value = "/users/pwd")
-  public void modifyUserWithPasswordUpdate(@RequestBody User user, HttpServletResponse response){
-    if (userService.modifyUserWithPasswordUpdate(user).getId() == null) {
-      logger.info("User unknown "+user.toString());
-      response.setStatus(409);
-    } else {
-      logger.info("User and/or password successfully modified "+user.toString());
-      response.setStatus(200);
-    }
+  public void modifyUserWithPasswordUpdate(@RequestBody User user, HttpServletResponse response) {
+
   }
 
 
