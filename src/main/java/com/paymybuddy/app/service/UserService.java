@@ -4,7 +4,7 @@ import com.paymybuddy.app.model.User;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
-public interface IUserService {
+public interface UserService {
   /**
    * Add a user. Verify is the user is already registered by checking existing email.
    * Return false if already registered.

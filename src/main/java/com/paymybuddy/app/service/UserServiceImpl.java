@@ -2,8 +2,8 @@ package com.paymybuddy.app.service;
 
 import com.paymybuddy.app.model.MoneyTransaction;
 import com.paymybuddy.app.model.User;
-import com.paymybuddy.app.repository.IMoneyTransactionRepository;
-import com.paymybuddy.app.repository.IUserRepository;
+import com.paymybuddy.app.repository.MoneyTransactionRepository;
+import com.paymybuddy.app.repository.UserRepository;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
@@ -13,17 +13,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserServiceImpl implements IUserService {
+public class UserServiceImpl implements UserService {
   private static final Logger logger = LogManager.getLogger("UserService");
 
   @Autowired
   PasswordEncoder passwordEncoder;
 
   @Autowired
-  IUserRepository userRepository;
+  UserRepository userRepository;
 
   @Autowired
-  IMoneyTransactionRepository moneyTransactionRepository;
+  MoneyTransactionRepository moneyTransactionRepository;
 
   /**
    * @inheritDoc

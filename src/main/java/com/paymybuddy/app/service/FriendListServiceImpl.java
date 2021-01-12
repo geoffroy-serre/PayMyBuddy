@@ -2,9 +2,8 @@ package com.paymybuddy.app.service;
 
 import com.paymybuddy.app.DTO.Friend;
 import com.paymybuddy.app.model.FriendList;
-import com.paymybuddy.app.model.User;
-import com.paymybuddy.app.repository.IFriendListRepository;
-import com.paymybuddy.app.repository.IUserRepository;
+import com.paymybuddy.app.repository.FriendListRepository;
+import com.paymybuddy.app.repository.UserRepository;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
@@ -13,13 +12,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FriendListServiceImpl implements IFriendListService {
+public class FriendListServiceImpl implements FriendListService {
   private static final Logger logger = LogManager.getLogger("FriendListServiceImpl");
   @Autowired
-  IFriendListRepository friendListRepository;
+  FriendListRepository friendListRepository;
 
   @Autowired
-  IUserRepository userRepository;
+  UserRepository userRepository;
 
   /**
    *

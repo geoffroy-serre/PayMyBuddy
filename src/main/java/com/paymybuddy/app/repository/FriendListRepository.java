@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @Transactional
-public interface IFriendListRepository extends JpaRepository<FriendList, Integer> {
+public interface FriendListRepository extends JpaRepository<FriendList, Integer> {
 
   FriendList save(FriendList friendlist);
   void delete(FriendList friendlist);

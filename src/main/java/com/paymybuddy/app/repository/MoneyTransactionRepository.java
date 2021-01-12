@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @Transactional
-public interface IMoneyTransactionRepository extends JpaRepository<MoneyTransaction, Integer> {
+public interface MoneyTransactionRepository extends JpaRepository<MoneyTransaction, Integer> {
 
   MoneyTransaction findMoneyTransactionById(int id);
   MoneyTransaction save(MoneyTransaction moneyTransaction);

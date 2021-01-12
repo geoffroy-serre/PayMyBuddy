@@ -1,11 +1,12 @@
 package com.paymybuddy.app.service;
 
 
+import com.paymybuddy.app.exception.CantWithdrawException;
 import com.paymybuddy.app.exception.NotEnoughFundException;
 import com.paymybuddy.app.model.MoneyTransaction;
 import com.paymybuddy.app.model.User;
-import com.paymybuddy.app.repository.IMoneyTransactionRepository;
-import com.paymybuddy.app.repository.IUserRepository;
+import com.paymybuddy.app.repository.MoneyTransactionRepository;
+import com.paymybuddy.app.repository.UserRepository;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
@@ -14,14 +15,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MoneyTransactionServiceImpl implements IMoneyTransactionService {
+public class MoneyTransactionServiceImpl implements MoneyTransactionService {
   private static final Logger logger = LogManager.getLogger("MoneyTransactionServiceImpl");
 
   @Autowired
-  IMoneyTransactionRepository moneyTransactionRepository;
+  MoneyTransactionRepository moneyTransactionRepository;
 
   @Autowired
-  IUserRepository userRepository;
+  UserRepository userRepository;
 
   /**
    *
@@ -43,6 +44,31 @@ public class MoneyTransactionServiceImpl implements IMoneyTransactionService {
     }
 
     receiver.setTreasury(receiver.getTreasury() + moneyTransfert.getAmount());
+    logger.debug("Receiver balance set");
+    moneyTransactionRepository.save(moneyTransfert);
+    logger.debug("MoneyTransaction saved");
+  }
+
+  /**
+   *
+   * @inheritDoc
+   */
+  @Override
+  public void withdrawMoney(MoneyTransaction moneyTransfert) {
+    logger.debug("Entering withdrawMoney");
+    User receiver = userRepository.findUserById(moneyTransfert.getIdReceiver());
+    User sender = userRepository.findUserById(moneyTransfert.getIdSender());
+
+    if (sender.getTreasury() - moneyTransfert.getAmount() < 0) {
+      logger.error("Not enough fund excception. Sender hast not enough money for this transfert");
+      throw new NotEnoughFundException();
+    }
+    if(sender.getId() != receiver.getId()){
+      logger.error("Cant not withdraw money with receiver and sender differents");
+      throw new CantWithdrawException();
+    }
+
+    receiver.setTreasury(receiver.getTreasury() - moneyTransfert.getAmount());
     logger.debug("Receiver balance set");
     moneyTransactionRepository.save(moneyTransfert);
     logger.debug("MoneyTransaction saved");

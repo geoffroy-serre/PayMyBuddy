@@ -1,8 +1,7 @@
 package com.paymybuddy.app.controller;
 
 import com.paymybuddy.app.DTO.Friend;
-import com.paymybuddy.app.model.User;
-import com.paymybuddy.app.service.IFriendListService;
+import com.paymybuddy.app.service.FriendListService;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class FriendListController {
   private static final Logger logger = LogManager.getLogger("FriendListController");
   @Autowired
-  IFriendListService friendListService;
+  FriendListService friendListService;
 
   @PostMapping(value="/friends")
   public void addFriend(@RequestParam int userId, @RequestParam int userId2 ){

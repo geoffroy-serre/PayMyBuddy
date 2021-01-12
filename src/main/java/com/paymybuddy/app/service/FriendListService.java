@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
-public interface IFriendListService {
+public interface FriendListService {
 
   /**
    * Add a friend relationship.

@@ -16,6 +16,10 @@ public class MoneyTransaction {
   @Column(name = "date")
   private LocalDate date;
 
+  @Column(name = "description")
+  private String description;
+
+
   @Column(name = "id_receiver")
   private Integer idReceiver;
 
@@ -28,6 +32,14 @@ public class MoneyTransaction {
 
   public void setId(Integer id) {
     this.id = id;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   public Double getAmount() {

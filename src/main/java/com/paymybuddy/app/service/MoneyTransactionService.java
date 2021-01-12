@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
-public interface IMoneyTransactionService {
+public interface MoneyTransactionService {
   /**
    * Before saving the transaction, we check if the send have enough fund.
    * If true the amount is substracted from sender and added to receiver.
@@ -15,6 +15,16 @@ public interface IMoneyTransactionService {
    * @param moneyTransfert MoneyTransaction
    */
   void saveTransaction(MoneyTransaction moneyTransfert);
+
+  /**
+   * Need a complete MoneyTransaction object.
+   * You need to set the idreceiver and isender the same form withdraw.
+   * Before saving the transaction, we check if the send have enough fund.
+   * If not a new NotEnoughFoundException is thrown.
+   * The amount is substracted from balanc of idReceiver.
+   * @param moneyTransfert MoneyTransaction
+   */
+  void withdrawMoney(MoneyTransaction moneyTransfert);
 
   void deleteTransaction(int id);
 

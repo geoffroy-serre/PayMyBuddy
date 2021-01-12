@@ -28,4 +28,18 @@ public class ExceptionHandling {
     return response;
   }
 
+  @ExceptionHandler(CantWithdrawException.class)
+  @ResponseBody
+  public ExceptionResponse handleCantWithdrawException(CantWithdrawException cantWithdrawException,
+                                                       HttpServletRequest request,
+                                                       HttpServletResponse responseCode) {
+    responseCode.setStatus(400);
+    ExceptionResponse response = new ExceptionResponse(new Date(), 400, "Cant withdraw funds.",
+            request.getRequestURI()
+    );
+    logger.info(request.getMethod() + " " + request.getRequestURI() + " "+ response.getError());
+    logger.error("ERROR: " + response.toString());
+
+    return response;
+  }
 }
