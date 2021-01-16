@@ -1,7 +1,7 @@
 package com.paymybuddy.app.service;
 
-import com.paymybuddy.app.DTO.Friend;
 import com.paymybuddy.app.model.FriendList;
+import com.paymybuddy.app.model.User;
 import com.paymybuddy.app.repository.FriendListRepository;
 import com.paymybuddy.app.repository.UserRepository;
 import java.util.ArrayList;
@@ -62,17 +62,18 @@ public class FriendListServiceImpl implements FriendListService {
    * @inheritDoc
    */
   @Override
-  public List<Friend> findFriends(Integer id){
+  public List<User> findFriends(Integer id){
     logger.debug("Entering findFriends");
     List<FriendList> friendLists = new ArrayList<>( friendListRepository.findFriendListByIdUser(id));
-    List<Friend> users = new ArrayList<>();
-    Friend friendRetrieved = new Friend();
+    List<User> users = new ArrayList<>();
+    User userRetrieved = new User();
     for (FriendList friend: friendLists ) {
 
-      friendRetrieved.setFirstName(userRepository.findUserById(friend.getIdUser2()).getFirstName());
-      friendRetrieved.setLastName(userRepository.findUserById(friend.getIdUser2()).getLastName());
-      friendRetrieved.setEmail(userRepository.findUserById(friend.getIdUser2()).getEmail());
-      users.add(friendRetrieved);
+      userRetrieved.setFirstName(userRepository.findUserById(friend.getIdUser2()).getFirstName());
+      userRetrieved.setLastName(userRepository.findUserById(friend.getIdUser2()).getLastName());
+      userRetrieved.setEmail(userRepository.findUserById(friend.getIdUser2()).getEmail());
+
+      users.add(userRetrieved);
     }
     logger.debug("List of Friend returned");
     return users;

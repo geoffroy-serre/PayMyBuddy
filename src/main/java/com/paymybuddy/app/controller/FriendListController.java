@@ -1,6 +1,6 @@
 package com.paymybuddy.app.controller;
 
-import com.paymybuddy.app.DTO.Friend;
+import com.paymybuddy.app.model.User;
 import com.paymybuddy.app.service.FriendListService;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
@@ -27,7 +27,7 @@ public class FriendListController {
   }
 
   @GetMapping(value = "/friends")
-  public List<Friend> getFriends(@RequestParam Integer userId){
+  public List<User> getFriends(@RequestParam Integer userId){
     logger.info("Friend List returned for userId "+userId);
     return friendListService.findFriends(userId);
 

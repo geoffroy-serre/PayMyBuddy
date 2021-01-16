@@ -1,6 +1,6 @@
 package com.paymybuddy.app.service;
 
-import com.paymybuddy.app.DTO.Friend;
+import com.paymybuddy.app.model.User;
 import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,5 +36,5 @@ public interface FriendListService {
    * @param id Integer
    * @return List Friend
    */
-  List<Friend> findFriends(Integer id);
+  List<User> findFriends(Integer id);
 }

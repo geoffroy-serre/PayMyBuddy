@@ -67,18 +67,7 @@ public class UserServiceImpl implements UserService {
     if (user == null) {
       return false;
     }
-    List<MoneyTransaction> transactionsAsReceiver = new ArrayList<>();
-    transactionsAsReceiver.addAll(moneyTransactionRepository.findMoneyTransactionByIdReceiver(user.getId()));
-    List<MoneyTransaction> transactionsAsSender = new ArrayList<>();
-    transactionsAsSender.addAll(moneyTransactionRepository.findMoneyTransactionByIdSender(user.getId()));
-    for(MoneyTransaction transaction : transactionsAsReceiver){
-      transaction.setIdReceiver(null);
-     // moneyTransactionRepository.save(transaction);
-    }
-    for(MoneyTransaction transaction : transactionsAsSender){
-      transaction.setIdSender(null);
-      //moneyTransactionRepository.save(transaction);
-    }
+
 
     userRepository.delete(user);
     return true;
@@ -86,6 +75,7 @@ public class UserServiceImpl implements UserService {
 
   @Override
   public User findUserByEmail(String email) {
+
     return userRepository.findUserByEmail(email);
   }
 
