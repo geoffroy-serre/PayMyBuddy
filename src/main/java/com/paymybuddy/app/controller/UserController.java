@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 @RestController
 public class UserController {
@@ -29,7 +30,7 @@ public class UserController {
   }
 
   @PostMapping(value = "/users")
-  public void addUser(@RequestBody User user, HttpServletResponse response) {
+  public void addUser(@Valid @RequestBody User user, HttpServletResponse response) {
     if (!userService.addUser(user)) {
       logger.info("Email already known " + user.getEmail());
       response.setStatus(409);

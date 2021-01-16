@@ -52,6 +52,7 @@ class MoneyTransactionServiceImplTest {
   void saveTransactionNotEnoughFund() {
     when(userRepository.findUserById(moneyTransaction.getIdReceiver())).thenReturn(user);
     when(userRepository.findUserById(moneyTransaction.getIdSender())).thenReturn(user);
+    when(user.getId()).thenReturn(1,2);
     when(moneyTransaction.getAmount()).thenReturn(500.0);
     when(user.getTreasury()).thenReturn(100.0);
     assertThrows(NotEnoughFundException.class,

@@ -1,6 +1,7 @@
 package com.paymybuddy.app.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="friendlists")
@@ -10,9 +11,11 @@ public class FriendList {
   private Integer id;
 
   @Column(name="id_user")
+  @NotNull
   Integer idUser;
 
   @Column(name="id_user2")
+  @NotNull
   Integer idUser2;
 
   public Integer getId() {

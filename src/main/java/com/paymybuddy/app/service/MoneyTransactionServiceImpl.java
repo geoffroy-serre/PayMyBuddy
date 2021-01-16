@@ -7,6 +7,7 @@ import com.paymybuddy.app.model.MoneyTransaction;
 import com.paymybuddy.app.model.User;
 import com.paymybuddy.app.repository.MoneyTransactionRepository;
 import com.paymybuddy.app.repository.UserRepository;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.logging.log4j.LogManager;
@@ -34,13 +35,16 @@ public class MoneyTransactionServiceImpl implements MoneyTransactionService {
     User receiver = userRepository.findUserById(moneyTransfert.getIdReceiver());
     User sender = userRepository.findUserById(moneyTransfert.getIdSender());
 
-    if (sender.getTreasury() - moneyTransfert.getAmount() < 0) {
+    if (sender.getTreasury() - moneyTransfert.getAmount() < 0 && sender.getId() != receiver.getId()) {
       logger.error("Not enough fund excception. Sender hast not enough money for this transfert");
       throw new NotEnoughFundException();
     }
     if (receiver.getId() != sender.getId()) {
       sender.setTreasury(sender.getTreasury() - moneyTransfert.getAmount());
       logger.debug("Sender balance set");
+    }
+    if(moneyTransfert.getDate() ==null){
+      moneyTransfert.setDate(LocalDate.now());
     }
 
     receiver.setTreasury(receiver.getTreasury() + moneyTransfert.getAmount());

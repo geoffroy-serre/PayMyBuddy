@@ -2,6 +2,7 @@ package com.paymybuddy.app.model;
 
 import java.time.LocalDate;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "transactions")
@@ -11,19 +12,24 @@ public class MoneyTransaction {
   private Integer id;
 
   @Column(name = "amount_ht")
+  @NotNull
   private Double amount;
 
   @Column(name = "date")
+  @NotNull
   private LocalDate date;
 
   @Column(name = "description")
+  @NotNull
   private String description;
 
 
   @Column(name = "id_receiver")
+  @NotNull
   private Integer idReceiver;
 
   @Column(name = "id_sender")
+  @NotNull
   private Integer idSender;
 
   public Integer getId() {
