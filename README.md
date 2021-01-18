@@ -45,7 +45,7 @@ DAL for PayMyBuddy, an app use for money transferts between friends
 </br>
 </br>
 
-### 1.3 SQl Scripts
+### 1.3 SQL Scripts
 
 In the SQL folder you have two script:
 
