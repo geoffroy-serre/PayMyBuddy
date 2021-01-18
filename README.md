@@ -34,7 +34,7 @@ DAL for PayMyBuddy, an app use for money transferts between friends
 ![Java Version](https://img.shields.io/badge/Java-11.0-red)
 ![Maven Version](https://img.shields.io/badge/Maven-3.6.3-blue)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0.21-cyan)
-![SpringBoot Version](https://img.shields.io/badge/Spring%20Boot-11.0-brightgreen)
+![SpringBoot Version](https://img.shields.io/badge/Spring%20Boot-2.4.1-brightgreen)
 ![TomCat](https://img.shields.io/badge/TomCat:8080-9.0.41-brightgreen)
 ![Coverage](https://img.shields.io/badge/Coverage%20with%20IT-95%25-green)
 </br>
@@ -161,13 +161,13 @@ to avoid personnal information leak like adress and password.
     source of potential issues to bill already done transactions (for example if user treasury 
     is 0, or account deleted after transaction).</br></br>
 * To send money, frontend have to retrieved user friends to be able to make a transaction.</br></br>
-* When a user is created there is no need to specify id, but when you want to modify a user, you 
-  have to specify its id, or it may failed if its the same email, or create a new user if the 
+* When a user is created there is no need to specify an id and shouldn't bee specified, but when you 
+  want to modify a user, you  have to specify its id, or it may fail if it's the same email, or create a new user if the 
   mail have change.</br></br>
     
 * When a user is deleted, to preserve the MoneyTransaction relations, all field are set to 
-  "Deleted" except the id which still exist. It avoid to delete all transactions, and make it 
+  "Deleted" except the id which still exist. It avoids deleting all transactions, and make it 
   impossible to the "user 2", to get all the transactions in his history even if a user is not 
   member anymore. 
-  It's the simpliest way i've found to respect RGPD.
+  It's the simplest way I've found to respect RGPD.
 

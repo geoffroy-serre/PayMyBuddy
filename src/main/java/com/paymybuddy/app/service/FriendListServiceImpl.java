@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class FriendListServiceImpl implements FriendListService {
-  private static final Logger logger = LogManager.getLogger("FriendListServiceImpl");
+  private static final Logger logger = LogManager.getLogger("paymybuddy.FriendListServiceImpl");
   @Autowired
   FriendListRepository friendListRepository;
 

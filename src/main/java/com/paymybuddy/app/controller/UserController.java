@@ -12,7 +12,7 @@ import javax.validation.Valid;
 
 @RestController
 public class UserController {
-  private static final Logger logger = LogManager.getLogger("UserController");
+  private static final Logger logger = LogManager.getLogger("paymybuddy.UserController");
 
   @Autowired
   UserService userService;

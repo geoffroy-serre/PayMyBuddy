@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService {
-  private static final Logger logger = LogManager.getLogger("UserService");
+  private static final Logger logger = LogManager.getLogger("paymybuddy.UserService");
 
   @Autowired
   PasswordEncoder passwordEncoder;

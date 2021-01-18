@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MoneyTransactionServiceImpl implements MoneyTransactionService {
-  private static final Logger logger = LogManager.getLogger("MoneyTransactionServiceImpl");
+  private static final Logger logger = LogManager.getLogger("paymybuddy.MoneyTransactionServiceImpl");
 
   @Autowired
   MoneyTransactionRepository moneyTransactionRepository;

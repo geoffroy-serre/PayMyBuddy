@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @ControllerAdvice
 public class ExceptionHandling {
-  private static final Logger logger = LogManager.getLogger("ExceptionHandling");
+  private static final Logger logger = LogManager.getLogger("paymybuddy.ExceptionHandling");
   @ExceptionHandler(NotEnoughFundException.class)
   @ResponseBody
   public ExceptionResponse handleTypeMismatchException(NotEnoughFundException notEnoughFundException,

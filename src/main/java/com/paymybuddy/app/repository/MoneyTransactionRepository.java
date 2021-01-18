@@ -15,5 +15,6 @@ public interface MoneyTransactionRepository extends JpaRepository<MoneyTransacti
   List<MoneyTransaction> findMoneyTransactionByIdReceiver(int id);
   List<MoneyTransaction> findMoneyTransactionByIdSender(int id);
   MoneyTransaction findMoneyTransactionByDescription(String description);
+  List<MoneyTransaction> findAll();
 
 }

@@ -10,25 +10,26 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class FriendListController {
-  private static final Logger logger = LogManager.getLogger("FriendListController");
+  private static final Logger logger = LogManager.getLogger("paymybuddy.FriendListController");
   @Autowired
   FriendListService friendListService;
 
-  @PostMapping(value="/friends")
-  public void addFriend(@RequestParam int userId, @RequestParam int userId2 ){
+  @PostMapping(value = "/friends")
+  public void addFriend(@RequestParam int userId, @RequestParam int userId2) {
     friendListService.addFriend(userId, userId2);
-    logger.info("Added Friend relationship for user n# "+userId+ " and "+userId2);
+    logger.info("Added Friend relationship for user n# " + userId + " and " + userId2);
 
   }
-  @DeleteMapping (value = "/friends")
-  public void deleteFriend(@RequestParam int userId, @RequestParam int userId2){
-    friendListService.deleteFriend(userId,userId2);
-    logger.info("Deleted Friend relationship for user n# "+userId+ " and "+userId2);
+
+  @DeleteMapping(value = "/friends")
+  public void deleteFriend(@RequestParam int userId, @RequestParam int userId2) {
+    friendListService.deleteFriend(userId, userId2);
+    logger.info("Deleted Friend relationship for user n# " + userId + " and " + userId2);
   }
 
   @GetMapping(value = "/friends")
-  public List<User> getFriends(@RequestParam Integer userId){
-    logger.info("Friend List returned for userId "+userId);
+  public List<User> getFriends(@RequestParam Integer userId) {
+    logger.info("Friend List returned for userId " + userId);
     return friendListService.findFriends(userId);
 
   }
