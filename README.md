@@ -17,6 +17,8 @@
     * [Money Transaction](#32-moneytransation-format)
     * [FriendList](#33-friendlist-format)
   
+* [Points of attention](#4-points-of-attention)
+  
     
 
 ## Description
