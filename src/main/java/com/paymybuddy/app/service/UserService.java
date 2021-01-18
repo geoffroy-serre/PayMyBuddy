@@ -31,5 +31,12 @@ public interface UserService {
    */
   boolean deleteUser(String email);
 
+  /**
+   * Delete User who have no transaction linked
+   * @param email
+   * @return boolean
+   */
+  boolean deleteUserWithNoTransaction(String email);
+
   User findUserByEmail(String email);
 }

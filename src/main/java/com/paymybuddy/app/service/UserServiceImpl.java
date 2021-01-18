@@ -1,11 +1,11 @@
 package com.paymybuddy.app.service;
 
+import com.paymybuddy.app.exception.StillFundOnAccountException;
 import com.paymybuddy.app.model.MoneyTransaction;
 import com.paymybuddy.app.model.User;
 import com.paymybuddy.app.repository.MoneyTransactionRepository;
 import com.paymybuddy.app.repository.UserRepository;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.LocalDate;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,9 +67,37 @@ public class UserServiceImpl implements UserService {
     if (user == null) {
       return false;
     }
+    if (user.getTreasury()>0){
+      throw new StillFundOnAccountException();
+    }
+    user.setPassword("gS)e+<gSh]dvZ<qGYM>/HbmfxcYF+M:Gfds}@ma`h?k[*2?2ngwm8[K2/V7M^vj3tKE~g{u5b2g.qBG_UB");
+    user.setZip("Deleted");
+    user.setBirthDate(LocalDate.of(1900,01,01));
+    user.setCity("Deleted");
+    user.setPhone("Deleted");
+    user.setEmail("deleted@user");
+    user.setAddress("Deleted address");
+    user.setFirstName("Deleted");
+    user.setLastName("Deleted");
+    userRepository.save(user);
 
+    return true;
+  }
+  /**
+   * @inheritDoc
+   */
+  @Override
+  public boolean deleteUserWithNoTransaction(String email) {
+    User user = userRepository.findUserByEmail(email);
+    if (user == null) {
+      return false;
+    }
+    if (user.getTreasury()>0){
+      throw new StillFundOnAccountException();
+    }
 
     userRepository.delete(user);
+
     return true;
   }
 

@@ -37,4 +37,6 @@ public interface MoneyTransactionService {
    * @return list MoneyTransaction
    */
   List<MoneyTransaction> findAllTransactionsForOneUser(int id);
+
+  MoneyTransaction findMoneyTransactionByDescription(String description);
 }

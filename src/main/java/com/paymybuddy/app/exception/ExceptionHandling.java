@@ -42,6 +42,21 @@ public class ExceptionHandling {
 
     return response;
   }
+  @ExceptionHandler(StillFundOnAccountException.class)
+  @ResponseBody
+  public ExceptionResponse stillFundOnAccountException(StillFundOnAccountException stillFundOnAccountException,
+                                                       HttpServletRequest request,
+                                                       HttpServletResponse responseCode) {
+    responseCode.setStatus(400);
+    ExceptionResponse response = new ExceptionResponse(new Date(), 400, "Can't delete account " +
+            "there is still fund to withdraw.",
+            request.getRequestURI()
+    );
+    logger.info(request.getMethod() + " " + request.getRequestURI() + " "+ response.getError());
+    logger.error("ERROR: " + response.toString());
+
+    return response;
+  }
 
 
 }

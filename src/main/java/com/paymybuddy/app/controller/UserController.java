@@ -60,10 +60,6 @@ public class UserController {
 
   }
 
-  @PutMapping(value = "/users/pwd")
-  public void modifyUserWithPasswordUpdate(@RequestBody User user, HttpServletResponse response) {
-
-  }
 
 
 }

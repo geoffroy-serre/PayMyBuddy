@@ -62,6 +62,7 @@ public class MoneyTransactionServiceImpl implements MoneyTransactionService {
     logger.debug("Entering withdrawMoney");
     User receiver =  userRepository.findUserById(moneyTransfert.getIdReceiver());
     User sender =  userRepository.findUserById(moneyTransfert.getIdSender());
+    moneyTransfert.setDate(LocalDate.now());
 
     if (sender.getTreasury() - moneyTransfert.getAmount() < 0) {
       logger.error("Not enough fund exception. Sender hast not enough money for this transfert");
@@ -109,5 +110,10 @@ public class MoneyTransactionServiceImpl implements MoneyTransactionService {
     return transactions;
   }
 
+
+  @Override
+  public MoneyTransaction findMoneyTransactionByDescription(String description){
+    return moneyTransactionRepository.findMoneyTransactionByDescription(description);
+  }
 
 }
