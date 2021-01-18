@@ -54,7 +54,6 @@ public class User {
   private Double treasury;
 
 
-
   public Integer getId() {
     return id;
   }
@@ -146,7 +145,7 @@ public class User {
   @Override
   public String toString() {
     return "User{" +
-            "id='"+id +'\'' +
+            "id='" + id + '\'' +
             ",firstName='" + firstName + '\'' +
             ", email='" + email + '\'' +
             ", password='" + password + '\'' +

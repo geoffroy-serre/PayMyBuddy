@@ -1,0 +1,117 @@
+2021-01-18 19:13:22,406 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-18 19:13:22,620 DEBUG paymybuddy.FriendListServiceImpl [main] friend added
+2021-01-18 19:13:22,726 DEBUG paymybuddy.FriendListServiceImpl [main] Entering deleteFriend
+2021-01-18 19:13:22,739 DEBUG paymybuddy.FriendListServiceImpl [main] friend relationship deleted
+2021-01-18 19:13:23,016 INFO paymybuddy.FriendListController [main] Deleted Friend relationship for user n# 4 and 1
+2021-01-18 19:13:23,040 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-18 19:13:23,044 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-18 19:13:23,062 INFO paymybuddy.FriendListController [main] Friend List returned for userId 4
+2021-01-18 19:13:23,063 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-18 19:13:23,065 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-18 19:13:23,080 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-18 19:13:23,081 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-18 19:13:23,088 DEBUG paymybuddy.FriendListServiceImpl [main] Entering deleteFriend
+2021-01-18 19:13:23,097 INFO paymybuddy.ExceptionHandling [main] DELETE /friends No friendship found
+2021-01-18 19:13:23,102 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Mon Jan 18 19:13:23 CET 2021, status=400, error='No friendship found', path='/friends'}
+2021-01-18 19:13:23,134 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-18 19:13:23,140 INFO paymybuddy.ExceptionHandling [main] POST /friends You are already friends
+2021-01-18 19:13:23,140 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Mon Jan 18 19:13:23 CET 2021, status=400, error='You are already friends', path='/friends'}
+2021-01-18 19:13:23,148 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-18 19:13:23,153 INFO paymybuddy.ExceptionHandling [main] POST /friends You are already friends
+2021-01-18 19:13:23,153 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Mon Jan 18 19:13:23 CET 2021, status=400, error='You are already friends', path='/friends'}
+2021-01-18 19:13:23,158 INFO paymybuddy.FriendListController [main] Friend List returned for userId 3
+2021-01-18 19:13:23,159 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-18 19:13:23,166 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-18 19:13:23,177 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-18 19:13:23,182 DEBUG paymybuddy.FriendListServiceImpl [main] friend added
+2021-01-18 19:13:23,229 INFO paymybuddy.FriendListController [main] Added Friend relationship for user n# 4 and 1
+2021-01-18 19:13:23,230 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-18 19:13:23,234 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-18 19:13:23,236 DEBUG paymybuddy.FriendListServiceImpl [main] Entering deleteFriend
+2021-01-18 19:13:23,242 DEBUG paymybuddy.FriendListServiceImpl [main] friend relationship deleted
+2021-01-18 19:13:23,368 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering saveTransaction
+2021-01-18 19:13:23,372 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Sender balance set
+2021-01-18 19:13:23,376 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Receiver balance set
+2021-01-18 19:13:23,382 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] MoneyTransaction saved
+2021-01-18 19:13:23,439 INFO paymybuddy.MoneyTransactionController [main] transactionsaved
+2021-01-18 19:13:23,453 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering deleteTransaction
+2021-01-18 19:13:23,459 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-18 19:13:23,564 DEBUG paymybuddy.UserService [main] saving user
+2021-01-18 19:13:23,575 DEBUG paymybuddy.UserService [main] user saved
+2021-01-18 19:13:23,704 DEBUG paymybuddy.UserService [main] saving user
+2021-01-18 19:13:23,706 DEBUG paymybuddy.UserService [main] user saved
+2021-01-18 19:13:23,812 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering withdrawMoney
+2021-01-18 19:13:23,814 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Receiver balance set
+2021-01-18 19:13:23,815 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] MoneyTransaction saved
+2021-01-18 19:13:23,913 INFO paymybuddy.MoneyTransactionController [main] transactionsaved
+2021-01-18 19:13:23,915 DEBUG paymybuddy.UserService [main] saving user
+2021-01-18 19:13:23,917 DEBUG paymybuddy.UserService [main] user saved
+2021-01-18 19:13:23,974 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering deleteTransaction
+2021-01-18 19:13:23,975 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-18 19:13:24,036 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering saveTransaction
+2021-01-18 19:13:24,039 ERROR paymybuddy.MoneyTransactionServiceImpl [main] Not enough fund excception. Sender hast not enough money for this transfert
+2021-01-18 19:13:24,040 INFO paymybuddy.ExceptionHandling [main] POST /moneyTransaction/ Not Enough funds
+2021-01-18 19:13:24,040 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Mon Jan 18 19:13:24 CET 2021, status=400, error='Not Enough funds', path='/moneyTransaction/'}
+2021-01-18 19:13:24,047 INFO paymybuddy.MoneyTransactionController [main] returning transactions
+2021-01-18 19:13:24,047 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering findAllTransactionsForOneUser
+2021-01-18 19:13:24,053 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Return transactions
+2021-01-18 19:13:24,062 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering withdrawMoney
+2021-01-18 19:13:24,065 ERROR paymybuddy.MoneyTransactionServiceImpl [main] Cant not withdraw money with receiver and sender differents
+2021-01-18 19:13:24,065 INFO paymybuddy.ExceptionHandling [main] POST /moneyTransaction/withdraw Cant withdraw funds.
+2021-01-18 19:13:24,066 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Mon Jan 18 19:13:24 CET 2021, status=400, error='Cant withdraw funds.', path='/moneyTransaction/withdraw'}
+2021-01-18 19:13:24,126 DEBUG paymybuddy.UserService [main] saving user
+2021-01-18 19:13:24,128 DEBUG paymybuddy.UserService [main] user saved
+2021-01-18 19:13:24,198 INFO paymybuddy.ExceptionHandling [main] DELETE /users Can't delete account there is still fund to withdraw.
+2021-01-18 19:13:24,198 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Mon Jan 18 19:13:24 CET 2021, status=400, error='Can't delete account there is still fund to withdraw.', path='/users'}
+2021-01-18 19:13:24,200 DEBUG paymybuddy.UserService [main] saving user
+2021-01-18 19:13:24,202 DEBUG paymybuddy.UserService [main] user saved
+2021-01-18 19:13:24,264 INFO paymybuddy.UserController [main] User successfully modified User{id='1',firstName='Geff', email='geff1982@gmail.com', password='$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK', lastName='Serre', address='85 rue Jean Jaures appt 05', city='Rochefort', zip='17300', phone='0619457854', birthDate=1982-04-14, treasury=0.0}
+2021-01-18 19:13:24,272 DEBUG paymybuddy.UserService [main] adding user
+2021-01-18 19:13:24,334 DEBUG paymybuddy.UserService [main] user added
+2021-01-18 19:13:24,438 INFO paymybuddy.UserController [main] User registered sucessfully User{id='65',firstName='Emil', email='emilito@smite.com', password='$2a$10$mYUHILGK1hw5nmejvbs1C.XZGPY01yfNXRMsB1M5S32Tfr951FAsm', lastName='Starman', address='15 rue des mimosas', city='Frankfurt', zip='654485', phone='0102030405', birthDate=1982-04-14, treasury=0.0}
+2021-01-18 19:13:24,559 DEBUG paymybuddy.UserService [main] adding user
+2021-01-18 19:13:24,560 DEBUG paymybuddy.UserService [main] user already registered
+2021-01-18 19:13:24,561 INFO paymybuddy.UserController [main] Email already known geff1982@gmail.com
+2021-01-18 19:13:24,566 DEBUG paymybuddy.UserService [main] saving user
+2021-01-18 19:13:24,567 DEBUG paymybuddy.UserService [main] user saved
+2021-01-18 19:13:24,647 INFO paymybuddy.UserController [main] User successfully modified User{id='1',firstName='Geff', email='maildetest@test.fr', password='$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK', lastName='Serre', address='85 rue Jean Jaures appt 05', city='Rochefort', zip='17300', phone='0619457854', birthDate=1982-04-14, treasury=0.0}
+2021-01-18 19:13:24,650 DEBUG paymybuddy.UserService [main] saving user
+2021-01-18 19:13:24,651 DEBUG paymybuddy.UserService [main] user saved
+2021-01-18 19:13:24,755 INFO paymybuddy.UserController [main] User successfully modified User{id='1',firstName='Geff', email='geff1982@gmail.com', password='$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK', lastName='Serre', address='85 rue Jean Jaures appt 05', city='Rochefort', zip='17300', phone='0619457854', birthDate=1982-04-14, treasury=0.0}
+2021-01-18 19:13:24,921 INFO paymybuddy.UserController [main] Delete user with email geff1982@gmail.com
+2021-01-18 19:13:24,923 DEBUG paymybuddy.UserService [main] saving user
+2021-01-18 19:13:24,924 DEBUG paymybuddy.UserService [main] user saved
+2021-01-18 19:13:25,021 INFO paymybuddy.UserController [main] User successfully modified User{id='1',firstName='Geff', email='geff1982@gmail.com', password='$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK', lastName='Serre', address='85 rue Jean Jaures appt 05', city='Rochefort', zip='17300', phone='0619457854', birthDate=1982-04-14, treasury=0.0}
+2021-01-18 19:13:25,226 DEBUG paymybuddy.FriendListServiceImpl [main] Entering deleteFriend
+2021-01-18 19:13:25,232 DEBUG paymybuddy.FriendListServiceImpl [main] Entering deleteFriend
+2021-01-18 19:13:25,232 DEBUG paymybuddy.FriendListServiceImpl [main] friend relationship deleted
+2021-01-18 19:13:25,234 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-18 19:13:25,234 DEBUG paymybuddy.FriendListServiceImpl [main] friend added
+2021-01-18 19:13:25,236 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-18 19:13:25,236 DEBUG paymybuddy.FriendListServiceImpl [main] error while adding friend
+2021-01-18 19:13:25,239 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-18 19:13:25,239 DEBUG paymybuddy.FriendListServiceImpl [main] error while adding friend
+2021-01-18 19:13:25,285 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering deleteTransaction
+2021-01-18 19:13:25,286 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-18 19:13:25,290 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering saveTransaction
+2021-01-18 19:13:25,291 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Sender balance set
+2021-01-18 19:13:25,291 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Receiver balance set
+2021-01-18 19:13:25,291 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] MoneyTransaction saved
+2021-01-18 19:13:25,294 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering saveTransaction
+2021-01-18 19:13:25,294 ERROR paymybuddy.MoneyTransactionServiceImpl [main] Not enough fund excception. Sender hast not enough money for this transfert
+2021-01-18 19:13:25,297 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering withdrawMoney
+2021-01-18 19:13:25,297 ERROR paymybuddy.MoneyTransactionServiceImpl [main] Not enough fund exception. Sender hast not enough money for this transfert
+2021-01-18 19:13:25,299 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering findAllTransactionsForOneUser
+2021-01-18 19:13:25,299 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Return transactions
+2021-01-18 19:13:25,300 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering deleteTransactions
+2021-01-18 19:13:25,301 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-18 19:13:25,301 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-18 19:13:25,301 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-18 19:13:25,301 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-18 19:13:25,301 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transactions deleted
+2021-01-18 19:13:25,303 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering withdrawMoney
+2021-01-18 19:13:25,303 ERROR paymybuddy.MoneyTransactionServiceImpl [main] Cant not withdraw money with receiver and sender differents
+2021-01-18 19:13:25,314 DEBUG paymybuddy.UserService [main] adding user
+2021-01-18 19:13:25,315 DEBUG paymybuddy.UserService [main] user added
+2021-01-18 19:13:25,316 DEBUG paymybuddy.UserService [main] adding user
+2021-01-18 19:13:25,316 DEBUG paymybuddy.UserService [main] user already registered

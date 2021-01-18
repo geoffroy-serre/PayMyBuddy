@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MoneyTransactionController {
-  private static final Logger logger = LogManager.getLogger("paymybuddy.MoneyTransactionController");
+  private static final Logger logger = LogManager.getLogger("paymybuddy" +
+          ".MoneyTransactionController");
 
   @Autowired
   MoneyTransactionService moneyTransaction;

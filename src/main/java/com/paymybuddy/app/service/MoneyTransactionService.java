@@ -12,6 +12,7 @@ public interface MoneyTransactionService {
    * If not a new NotEnoughFoundException is thrown.
    * If the sender and receiver id are the same, the amount is added to the account.
    * This case is processed as if user add money in his own account.
+   *
    * @param moneyTransfert MoneyTransaction
    */
   void saveTransaction(MoneyTransaction moneyTransfert);
@@ -22,6 +23,7 @@ public interface MoneyTransactionService {
    * Before saving the transaction, we check if the send have enough fund.
    * If not a new NotEnoughFoundException is thrown.
    * The amount is substracted from balanc of idReceiver.
+   *
    * @param moneyTransfert MoneyTransaction
    */
   void withdrawMoney(MoneyTransaction moneyTransfert);

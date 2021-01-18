@@ -17,7 +17,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MoneyTransactionServiceImpl implements MoneyTransactionService {
-  private static final Logger logger = LogManager.getLogger("paymybuddy.MoneyTransactionServiceImpl");
+  private static final Logger logger = LogManager.getLogger("paymybuddy" +
+          ".MoneyTransactionServiceImpl");
 
   @Autowired
   MoneyTransactionRepository moneyTransactionRepository;
@@ -26,7 +27,6 @@ public class MoneyTransactionServiceImpl implements MoneyTransactionService {
   UserRepository userRepository;
 
   /**
-   *
    * @inheritDoc
    */
   @Override
@@ -43,7 +43,7 @@ public class MoneyTransactionServiceImpl implements MoneyTransactionService {
       sender.setTreasury(sender.getTreasury() - moneyTransfert.getAmount());
       logger.debug("Sender balance set");
     }
-    if(moneyTransfert.getDate() ==null){
+    if (moneyTransfert.getDate() == null) {
       moneyTransfert.setDate(LocalDate.now());
     }
 
@@ -54,21 +54,20 @@ public class MoneyTransactionServiceImpl implements MoneyTransactionService {
   }
 
   /**
-   *
    * @inheritDoc
    */
   @Override
   public void withdrawMoney(MoneyTransaction moneyTransfert) {
     logger.debug("Entering withdrawMoney");
-    User receiver =  userRepository.findUserById(moneyTransfert.getIdReceiver());
-    User sender =  userRepository.findUserById(moneyTransfert.getIdSender());
+    User receiver = userRepository.findUserById(moneyTransfert.getIdReceiver());
+    User sender = userRepository.findUserById(moneyTransfert.getIdSender());
     moneyTransfert.setDate(LocalDate.now());
 
     if (sender.getTreasury() - moneyTransfert.getAmount() < 0) {
       logger.error("Not enough fund exception. Sender hast not enough money for this transfert");
       throw new NotEnoughFundException();
     }
-   if(sender.getId() != receiver.getId() ){
+    if (sender.getId() != receiver.getId()) {
       logger.error("Cant not withdraw money with receiver and sender differents");
       throw new CantWithdrawException();
     }
@@ -97,11 +96,10 @@ public class MoneyTransactionServiceImpl implements MoneyTransactionService {
   }
 
   /**
-   *
    * @inheritDoc
    */
   @Override
-  public List<MoneyTransaction> findAllTransactionsForOneUser(int id){
+  public List<MoneyTransaction> findAllTransactionsForOneUser(int id) {
     logger.debug("Entering findAllTransactionsForOneUser");
     List<MoneyTransaction> transactions = new ArrayList<>();
     transactions.addAll(moneyTransactionRepository.findMoneyTransactionByIdReceiver(id));
@@ -112,7 +110,7 @@ public class MoneyTransactionServiceImpl implements MoneyTransactionService {
 
 
   @Override
-  public MoneyTransaction findMoneyTransactionByDescription(String description){
+  public MoneyTransaction findMoneyTransactionByDescription(String description) {
     return moneyTransactionRepository.findMoneyTransactionByDescription(description);
   }
 

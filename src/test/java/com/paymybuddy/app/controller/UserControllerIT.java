@@ -6,19 +6,15 @@ import java.time.LocalDate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -136,24 +132,27 @@ public class UserControllerIT {
   void deleteUser() throws Exception {
     String jsonRequest = "{ \"id\":\"1\",\"firstName\":\"Geff\",\"lastName\":\"Serre\"," +
             "\"email\":\"geff1982@gmail.com\"," +
-            "\"password\":\"$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK\",\"address\":\"85 rue Jean Jaures appt 05\"," +
+            "\"password\":\"$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK\"," +
+            "\"address\":\"85 rue Jean Jaures appt 05\"," +
             "\"city\":\"Rochefort\"," +
             "\"zip\":\"17300\",\"phone\":\"0619457854\",\"birthDate\":\"1982-04-14\"," +
             "\"treasury\":0.0}";
 
     this.mockMvc.perform(delete("/users").contentType(MediaType.APPLICATION_JSON)
-            .param("email","geff1982@gmail.com"))
+            .param("email", "geff1982@gmail.com"))
             .andExpect(status().is(200));
 
     this.mockMvc.perform(put("/users").contentType(MediaType.APPLICATION_JSON)
-           .content(jsonRequest));
+            .content(jsonRequest));
 
   }
+
   @Test
   void deleteUserWithFunds() throws Exception {
     String jsonRequest = "{ \"id\":\"1\",\"firstName\":\"Geff\",\"lastName\":\"Serre\"," +
             "\"email\":\"geff1982@gmail.com\"," +
-            "\"password\":\"$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK\",\"address\":\"85 rue Jean Jaures appt 05\"," +
+            "\"password\":\"$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK\"," +
+            "\"address\":\"85 rue Jean Jaures appt 05\"," +
             "\"city\":\"Rochefort\"," +
             "\"zip\":\"17300\",\"phone\":\"0619457854\",\"birthDate\":\"1982-04-14\"," +
             "\"treasury\":0.0}";
@@ -163,7 +162,7 @@ public class UserControllerIT {
     userService.saveUser(geff);
 
     this.mockMvc.perform(delete("/users").contentType(MediaType.APPLICATION_JSON)
-            .param("email","geff1982@gmail.com"))
+            .param("email", "geff1982@gmail.com"))
             .andExpect(status().is(400));
 
     this.mockMvc.perform(put("/users").contentType(MediaType.APPLICATION_JSON)
@@ -175,14 +174,16 @@ public class UserControllerIT {
   void modifyUser() throws Exception {
     String jsonRequest = "{ \"id\":\"1\",\"firstName\":\"Geff\",\"lastName\":\"Serre\"," +
             "\"email\":\"maildetest@test.fr\"," +
-            "\"password\":\"$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK\",\"address\":\"85 rue Jean Jaures appt 05\"," +
+            "\"password\":\"$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK\"," +
+            "\"address\":\"85 rue Jean Jaures appt 05\"," +
             "\"city\":\"Rochefort\"," +
             "\"zip\":\"17300\",\"phone\":\"0619457854\",\"birthDate\":\"1982-04-14\"," +
             "\"treasury\":0.0}";
 
     String jsonRequest2 = "{ \"id\":\"1\",\"firstName\":\"Geff\",\"lastName\":\"Serre\"," +
             "\"email\":\"geff1982@gmail.com\"," +
-            "\"password\":\"$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK\",\"address\":\"85 rue Jean Jaures appt 05\"," +
+            "\"password\":\"$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK\"," +
+            "\"address\":\"85 rue Jean Jaures appt 05\"," +
             "\"city\":\"Rochefort\"," +
             "\"zip\":\"17300\",\"phone\":\"0619457854\",\"birthDate\":\"1982-04-14\"," +
             "\"treasury\":0.0}";
@@ -192,7 +193,7 @@ public class UserControllerIT {
             .content(jsonRequest))
             .andExpect(status().is(200));
     User expected = userController.getUserByEmail("maildetest@test.fr");
-    assertEquals("maildetest@test.fr",expected.getEmail());
+    assertEquals("maildetest@test.fr", expected.getEmail());
 
 
     this.mockMvc.perform(put("/users").contentType(MediaType.APPLICATION_JSON)

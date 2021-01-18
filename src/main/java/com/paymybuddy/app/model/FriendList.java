@@ -4,19 +4,17 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="friendlists")
+@Table(name = "friendlists")
 public class FriendList {
+  @Column(name = "id_user")
+  @NotNull
+  Integer idUser;
+  @Column(name = "id_user2")
+  @NotNull
+  Integer idUser2;
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
-
-  @Column(name="id_user")
-  @NotNull
-  Integer idUser;
-
-  @Column(name="id_user2")
-  @NotNull
-  Integer idUser2;
 
   public Integer getId() {
     return id;

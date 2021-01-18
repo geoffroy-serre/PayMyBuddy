@@ -11,9 +11,13 @@ import org.springframework.transaction.annotation.Transactional;
 public interface FriendListRepository extends JpaRepository<FriendList, Integer> {
 
   FriendList save(FriendList friendlist);
+
   void delete(FriendList friendlist);
+
   FriendList findFriendListByIdUserAndIdUser2(Integer idUser, Integer idUser2);
+
   FriendList findFriendListById(Integer id);
+
   List<FriendList> findFriendListByIdUser(Integer id);
 
 }

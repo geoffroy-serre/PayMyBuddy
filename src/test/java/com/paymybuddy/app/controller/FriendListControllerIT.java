@@ -11,7 +11,6 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -60,19 +59,19 @@ class FriendListControllerIT {
             .andExpect(status().is(200));
     assertNotNull(friendListService.findFriends(4));
 
-    friendListService.deleteFriend(4,1);
+    friendListService.deleteFriend(4, 1);
 
   }
 
   @Test
   void deleteFriend() throws Exception {
-    friendListService.addFriend(4,1);
+    friendListService.addFriend(4, 1);
     this.mockMvc.perform(delete("/friends").contentType(MediaType.APPLICATION_JSON)
             .param("userId", String.valueOf(4))
             .param("userId2", String.valueOf(1)))
             .andExpect(status().is(200));
 
-    assertEquals("[]",friendListService.findFriends(4).toString());
+    assertEquals("[]", friendListService.findFriends(4).toString());
 
 
   }
@@ -98,10 +97,10 @@ class FriendListControllerIT {
 
   @Test
   void getFriends() throws Exception {
-   MvcResult result = this.mockMvc.perform(get("/friends").contentType(MediaType.APPLICATION_JSON)
+    MvcResult result = this.mockMvc.perform(get("/friends").contentType(MediaType.APPLICATION_JSON)
             .param("userId", String.valueOf(3)))
             .andExpect(status().is(200))
-           .andReturn();
+            .andReturn();
 
     assertTrue(result.getResponse().getContentAsString().contains("Geff"));
     assertTrue(result.getResponse().getContentAsString().contains("Francine"));

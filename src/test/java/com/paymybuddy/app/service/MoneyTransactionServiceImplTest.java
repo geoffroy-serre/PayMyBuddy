@@ -6,7 +6,6 @@ import com.paymybuddy.app.model.MoneyTransaction;
 import com.paymybuddy.app.model.User;
 import com.paymybuddy.app.repository.MoneyTransactionRepository;
 import com.paymybuddy.app.repository.UserRepository;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -43,7 +42,7 @@ class MoneyTransactionServiceImplTest {
     when(userRepository.findUserById(moneyTransaction.getIdSender())).thenReturn(user);
     when(moneyTransaction.getAmount()).thenReturn(15.0);
     when(user.getTreasury()).thenReturn(100.0);
-    when(user.getId()).thenReturn(1,2);
+    when(user.getId()).thenReturn(1, 2);
     when(moneyTransactionRepository.save(moneyTransaction)).thenReturn(moneyTransaction);
     assertDoesNotThrow(() -> moneyTransactionService.saveTransaction(moneyTransaction));
   }
@@ -52,7 +51,7 @@ class MoneyTransactionServiceImplTest {
   void saveTransactionNotEnoughFund() {
     when(userRepository.findUserById(moneyTransaction.getIdReceiver())).thenReturn(user);
     when(userRepository.findUserById(moneyTransaction.getIdSender())).thenReturn(user);
-    when(user.getId()).thenReturn(1,2);
+    when(user.getId()).thenReturn(1, 2);
     when(moneyTransaction.getAmount()).thenReturn(500.0);
     when(user.getTreasury()).thenReturn(100.0);
     assertThrows(NotEnoughFundException.class,
@@ -75,8 +74,7 @@ class MoneyTransactionServiceImplTest {
 
     when(userRepository.findUserById(moneyTransaction.getIdReceiver())).thenReturn(user);
     when(userRepository.findUserById(moneyTransaction.getIdSender())).thenReturn(user);
-    when(user.getId()).thenReturn(1,2);
-
+    when(user.getId()).thenReturn(1, 2);
 
 
     when(moneyTransaction.getAmount()).thenReturn(50.0);
@@ -89,13 +87,13 @@ class MoneyTransactionServiceImplTest {
 
   @Test
   void deleteTransaction() {
-    assertDoesNotThrow(()->moneyTransactionService.deleteTransaction(1));
+    assertDoesNotThrow(() -> moneyTransactionService.deleteTransaction(1));
   }
 
   @Test
   void deleteTransactions() {
-    List<Integer> ids =new ArrayList<Integer>(Arrays.asList(1,2,4,5));
-    assertDoesNotThrow(()->moneyTransactionService.deleteTransactions(ids));
+    List<Integer> ids = new ArrayList<Integer>(Arrays.asList(1, 2, 4, 5));
+    assertDoesNotThrow(() -> moneyTransactionService.deleteTransactions(ids));
   }
 
   @Test
@@ -104,6 +102,6 @@ class MoneyTransactionServiceImplTest {
     List<MoneyTransaction> moneyTransactionsReceiver = new ArrayList<>();
     when(moneyTransactionRepository.findMoneyTransactionByIdReceiver(1)).thenReturn(moneyTransactionsSender);
     when(moneyTransactionRepository.findMoneyTransactionByIdReceiver(1)).thenReturn(moneyTransactionsReceiver);
-    assertDoesNotThrow(()->moneyTransactionService.findAllTransactionsForOneUser(1));
+    assertDoesNotThrow(() -> moneyTransactionService.findAllTransactionsForOneUser(1));
   }
 }

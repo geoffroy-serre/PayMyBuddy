@@ -8,6 +8,7 @@ public interface UserService {
   /**
    * Add a user. Verify is the user is already registered by checking existing email.
    * Return false if already registered.
+   *
    * @param user User
    * @return boolean
    */
@@ -15,6 +16,7 @@ public interface UserService {
 
   /**
    * Modify existing user.
+   *
    * @param user User
    * @return boolean
    */
@@ -26,6 +28,7 @@ public interface UserService {
   /**
    * Delete a user using email to find him.
    * Return true if delete succeed. False if no user found with the provided email.
+   *
    * @param email String
    * @return boolean
    */
@@ -33,6 +36,7 @@ public interface UserService {
 
   /**
    * Delete User who have no transaction linked
+   *
    * @param email
    * @return boolean
    */

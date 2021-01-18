@@ -1,7 +1,6 @@
 package com.paymybuddy.app.service;
 
 import com.paymybuddy.app.exception.StillFundOnAccountException;
-import com.paymybuddy.app.model.MoneyTransaction;
 import com.paymybuddy.app.model.User;
 import com.paymybuddy.app.repository.MoneyTransactionRepository;
 import com.paymybuddy.app.repository.UserRepository;
@@ -67,12 +66,13 @@ public class UserServiceImpl implements UserService {
     if (user == null) {
       return false;
     }
-    if (user.getTreasury()>0){
+    if (user.getTreasury() > 0) {
       throw new StillFundOnAccountException();
     }
-    user.setPassword("gS)e+<gSh]dvZ<qGYM>/HbmfxcYF+M:Gfds}@ma`h?k[*2?2ngwm8[K2/V7M^vj3tKE~g{u5b2g.qBG_UB");
+    user.setPassword("gS)e+<gSh]dvZ<qGYM>/HbmfxcYF+M:Gfds}@ma`h?k[*2?2ngwm8[K2/V7M^vj3tKE~g{u5b2g" +
+            ".qBG_UB");
     user.setZip("Deleted");
-    user.setBirthDate(LocalDate.of(1900,01,01));
+    user.setBirthDate(LocalDate.of(1900, 01, 01));
     user.setCity("Deleted");
     user.setPhone("Deleted");
     user.setEmail("deleted@user");
@@ -83,6 +83,7 @@ public class UserServiceImpl implements UserService {
 
     return true;
   }
+
   /**
    * @inheritDoc
    */
@@ -92,7 +93,7 @@ public class UserServiceImpl implements UserService {
     if (user == null) {
       return false;
     }
-    if (user.getTreasury()>0){
+    if (user.getTreasury() > 0) {
       throw new StillFundOnAccountException();
     }
 
