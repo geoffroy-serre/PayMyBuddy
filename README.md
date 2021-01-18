@@ -1,18 +1,18 @@
 # PayMyBuddy
 
 ## Table of Content
-* [Technical Informations](#1-technical-informations)</br>
+* [Technical Informations](#1-technical-informations)
     * [Requirements](#11-requirements)
     * [Diagrams](#12-diagrams)
     * [Sql Scripts](#13-sql-scripts)
     * [Installation](#14-installation)
   
-* [End Points](#2-endpoints)</br>
+* [End Points](#2-endpoints)
     * [User](#21-user)
     * [Money Transaction](#22-money-transactions)
     * [FriendList](#23-friend-list)
 
-* [Format](#3-format)</br>
+* [Format](#3-format)
     * [User](#31-user-format)
     * [Money Transaction](#32-moneytransation-format)
     * [FriendList](#33-friendlist-format)
