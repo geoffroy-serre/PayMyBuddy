@@ -149,4 +149,23 @@ to avoid personnal information leak like adress and password.
     }
 ```
 
+## 4 Points of attention
+* When the billing service will be available, you can use the MoneyTransactionRepository 
+  interface and call this method, to get all Transaction and bill them.
+  ```Java
+  List<MoneyTransaction> findAll();
+  ```
+  * I suggest to not go in production without the billing system done. It would be a pain and 
+    source of potential issues to bill already done transactions (for example if user treasury 
+    is 0, or account deleted after transaction).</br></br>
+* To send money, frontend have to retrieved user friends to be able to make a transaction.</br></br>
+* When a user is created there is no need to specify id, but when you want to modify a user, you 
+  have to specify its id, or it may failed if its the same email, or create a new user if the 
+  mail have change.</br></br>
+    
+* When a user is deleted, to preserve the MoneyTransaction relations, all field are set to 
+  "Deleted" except the id which still exist. It avoid to delete all transactions, and make it 
+  impossible to the "user 2", to get all the transactions in his history even if a user is not 
+  member anymore. 
+  It's the simpliest way i've found to respect RGPD.
 
