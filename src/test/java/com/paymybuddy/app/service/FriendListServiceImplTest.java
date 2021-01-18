@@ -1,5 +1,6 @@
 package com.paymybuddy.app.service;
 
+import com.paymybuddy.app.exception.NoFriendShipFound;
 import com.paymybuddy.app.model.FriendList;
 import com.paymybuddy.app.model.User;
 import com.paymybuddy.app.repository.FriendListRepository;
@@ -64,7 +65,7 @@ class FriendListServiceImplTest {
     when(userRepository.findUserById(1)).thenReturn(user);
     when(userRepository.findUserById(2)).thenReturn(user);
     when(friendListRepository.findFriendListByIdUserAndIdUser2(1,2)).thenReturn(null);
-    assertFalse(friendListService.deleteFriend(1,2));
+    assertThrows(NoFriendShipFound.class, ()-> friendListService.deleteFriend(1,2));
 
   }
 
