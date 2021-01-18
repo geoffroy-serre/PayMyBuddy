@@ -106,10 +106,13 @@ class MoneyTransactionControllerIT {
   void withdrawMoney() throws Exception {
     String request = "{\"amount\":\"100\",\"idReceiver\":\"2\",\"idSender\":\"2\",\"date\":\"\"," +
             "\"description\":\"Test\"}";
+    User user = userService.findUserById(2);
+    double treasury = user.getTreasury();
     this.mockMvc.perform(post("/moneyTransaction/withdraw").contentType(MediaType.APPLICATION_JSON)
             .content(request))
             .andExpect(status().is(200));
-    User user = userService.findUserById(2);
+    user = userService.findUserById(2);
+    assertEquals(treasury-100, user.getTreasury());
     user.setTreasury(544.75);
     userService.saveUser(user);
     MoneyTransaction todelete = moneyTransactionService.findMoneyTransactionByDescription("Test");
