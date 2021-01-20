@@ -149,25 +149,12 @@ public class UserControllerIT {
 
   @Test
   void deleteUserWithFunds() throws Exception {
-    String jsonRequest = "{ \"id\":\"1\",\"firstName\":\"Geff\",\"lastName\":\"Serre\"," +
-            "\"email\":\"geff1982@gmail.com\"," +
-            "\"password\":\"$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK\"," +
-            "\"address\":\"85 rue Jean Jaures appt 05\"," +
-            "\"city\":\"Rochefort\"," +
-            "\"zip\":\"17300\",\"phone\":\"0619457854\",\"birthDate\":\"1982-04-14\"," +
-            "\"treasury\":0.0}";
-
-    User geff = userService.findUserById(1);
-    geff.setTreasury(100.0);
-    userService.saveUser(geff);
 
     this.mockMvc.perform(delete("/users").contentType(MediaType.APPLICATION_JSON)
-            .param("email", "geff1982@gmail.com"))
+            .param("email", "adapting@smite.com"))
             .andExpect(status().is(400));
 
-    this.mockMvc.perform(put("/users").contentType(MediaType.APPLICATION_JSON)
-            .content(jsonRequest));
-    userService.findUserById(1).setTreasury(-100.0);
+
   }
 
   @Test

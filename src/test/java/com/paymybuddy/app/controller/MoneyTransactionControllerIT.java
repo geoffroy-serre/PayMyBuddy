@@ -33,6 +33,7 @@ class MoneyTransactionControllerIT {
   @Autowired
   UserService userService;
 
+
   @Autowired
   private WebApplicationContext wac;
 
@@ -44,11 +45,6 @@ class MoneyTransactionControllerIT {
 
   }
 
-  @AfterEach
-  void reset() {
-
-
-  }
 
   @Test
   void postTransaction() throws Exception {
@@ -113,6 +109,8 @@ class MoneyTransactionControllerIT {
             .andExpect(status().is(200));
     user = userService.findUserById(2);
     assertEquals(treasury-100, user.getTreasury());
+
+    //reset Db as it were initially
     user.setTreasury(544.75);
     userService.saveUser(user);
     MoneyTransaction todelete = moneyTransactionService.findMoneyTransactionByDescription("Test");

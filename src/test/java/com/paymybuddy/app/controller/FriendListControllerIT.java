@@ -59,19 +59,19 @@ class FriendListControllerIT {
             .andExpect(status().is(200));
     assertNotNull(friendListService.findFriends(4));
 
-    friendListService.deleteFriend(4, 1);
+    friendListController.deleteFriend(4,1);
 
   }
 
   @Test
   void deleteFriend() throws Exception {
-    friendListService.addFriend(4, 1);
+    friendListController.addFriend(4, 1);
     this.mockMvc.perform(delete("/friends").contentType(MediaType.APPLICATION_JSON)
             .param("userId", String.valueOf(4))
             .param("userId2", String.valueOf(1)))
             .andExpect(status().is(200));
 
-    assertEquals("[]", friendListService.findFriends(4).toString());
+    assertEquals("[]", friendListController.getFriends(4).toString());
 
 
   }
