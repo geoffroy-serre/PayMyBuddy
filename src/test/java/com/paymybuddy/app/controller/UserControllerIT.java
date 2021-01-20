@@ -81,6 +81,8 @@ public class UserControllerIT {
     this.mockMvc.perform(post("/users").contentType(MediaType.APPLICATION_JSON)
             .content(jsonRequest))
             .andExpect(status().is(200));
+    assertEquals("Starman", userController.getUserByEmail("emilito@smite.com").getLastName());
+    assertEquals("emilito@smite.com", userController.getUserByEmail("emilito@smite.com").getEmail());
 
     this.mockMvc.perform(delete("/users").contentType(MediaType.APPLICATION_JSON)
             .param("email","emilito@smite.com"))
