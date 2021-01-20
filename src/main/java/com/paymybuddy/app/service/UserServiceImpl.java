@@ -1,10 +1,12 @@
 package com.paymybuddy.app.service;
 
 import com.paymybuddy.app.exception.StillFundOnAccountException;
+import com.paymybuddy.app.model.MoneyTransaction;
 import com.paymybuddy.app.model.User;
 import com.paymybuddy.app.repository.MoneyTransactionRepository;
 import com.paymybuddy.app.repository.UserRepository;
 import java.time.LocalDate;
+import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,12 +71,14 @@ public class UserServiceImpl implements UserService {
     if (user.getTreasury() > 0) {
       throw new StillFundOnAccountException();
     }
-    if(moneyTransactionRepository.findMoneyTransactionByIdSender(user.getId())==null
-            || moneyTransactionRepository.findMoneyTransactionByIdReceiver(user.getId())==null ){
+
+    if (moneyTransactionRepository.findMoneyTransactionByIdSender(user.getId()).isEmpty()
+            && moneyTransactionRepository.findMoneyTransactionByIdReceiver(user.getId()).isEmpty()) {
       deleteUserWithNoTransaction(email);
       return true;
     }
-    user.setPassword("gS)e+<gSh]dvZ<qGYM>/HbmfxcYF+M:Gfds}@ma`h?k[*2?2ngwm8[K2/V7M^vj3tKE~g{u5b2g" +
+    user.setPassword("gS)e+<gSh]dvZ<qGYM>/HbmfxcYF+M:Gfds}@ma`h?k[*2?2ngwm8[K2/V7M^vj3tKE~g" +
+            "{u5b2g" +
             ".qBG_UB");
     user.setZip("Deleted");
     user.setBirthDate(LocalDate.of(1900, 01, 01));

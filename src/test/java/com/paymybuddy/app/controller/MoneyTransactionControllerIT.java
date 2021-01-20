@@ -31,7 +31,7 @@ class MoneyTransactionControllerIT {
 
   @Autowired
   UserService userService;
-  
+
   @Autowired
   private WebApplicationContext wac;
 

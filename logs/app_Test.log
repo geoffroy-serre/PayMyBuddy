@@ -465,3 +465,173 @@
 2021-01-20 13:50:56,133 DEBUG paymybuddy.UserService [main] saving user
 2021-01-20 13:50:56,134 DEBUG paymybuddy.UserService [main] user saved
 2021-01-20 13:50:56,218 INFO paymybuddy.UserController [main] User successfully modified User{id='1',firstName='Geff', email='geff1982@gmail.com', password='$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK', lastName='Serre', address='85 rue Jean Jaures appt 05', city='Rochefort', zip='17300', phone='0619457854', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:10:09,988 INFO paymybuddy.ExceptionHandling [main] DELETE /users Can't delete account there is still fund to withdraw.
+2021-01-20 14:10:09,993 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Wed Jan 20 14:10:09 CET 2021, status=400, error='Can't delete account there is still fund to withdraw.', path='/users'}
+2021-01-20 14:10:10,016 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:10:10,102 DEBUG paymybuddy.UserService [main] user added
+2021-01-20 14:10:10,183 INFO paymybuddy.UserController [main] User registered sucessfully User{id='14',firstName='Emil', email='emilito@smite.com', password='$2a$10$EJTdIdN3O85FGFDgUqr/W.4SiOu/JFXbRIC.ngL6ybJDj2wU3txd.', lastName='Starman', address='15 rue des mimosas', city='Frankfurt', zip='654485', phone='0102030405', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:10:10,289 INFO paymybuddy.UserController [main] Delete user with email emilito@smite.com
+2021-01-20 14:10:10,306 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:10:10,307 DEBUG paymybuddy.UserService [main] user already registered
+2021-01-20 14:10:10,308 INFO paymybuddy.UserController [main] Email already known geff1982@gmail.com
+2021-01-20 14:10:10,314 DEBUG paymybuddy.UserService [main] saving user
+2021-01-20 14:10:10,324 DEBUG paymybuddy.UserService [main] user saved
+2021-01-20 14:10:10,397 INFO paymybuddy.UserController [main] User successfully modified User{id='1',firstName='Geff', email='maildetest@test.fr', password='$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK', lastName='Serre', address='85 rue Jean Jaures appt 05', city='Rochefort', zip='17300', phone='0619457854', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:10:10,400 DEBUG paymybuddy.UserService [main] saving user
+2021-01-20 14:10:10,401 DEBUG paymybuddy.UserService [main] user saved
+2021-01-20 14:10:10,453 INFO paymybuddy.UserController [main] User successfully modified User{id='1',firstName='Geff', email='geff1982@gmail.com', password='$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK', lastName='Serre', address='85 rue Jean Jaures appt 05', city='Rochefort', zip='17300', phone='0619457854', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:10:10,513 INFO paymybuddy.UserController [main] Delete user with email geff1982@gmail.com
+2021-01-20 14:10:10,515 DEBUG paymybuddy.UserService [main] saving user
+2021-01-20 14:10:10,516 DEBUG paymybuddy.UserService [main] user saved
+2021-01-20 14:10:10,561 INFO paymybuddy.UserController [main] User successfully modified User{id='1',firstName='Geff', email='geff1982@gmail.com', password='$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK', lastName='Serre', address='85 rue Jean Jaures appt 05', city='Rochefort', zip='17300', phone='0619457854', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:10:59,316 INFO paymybuddy.UserController [main] Delete user with email geff1982@gmail.com
+2021-01-20 14:10:59,362 DEBUG paymybuddy.UserService [main] saving user
+2021-01-20 14:10:59,369 DEBUG paymybuddy.UserService [main] user saved
+2021-01-20 14:10:59,696 INFO paymybuddy.UserController [main] User successfully modified User{id='1',firstName='Geff', email='geff1982@gmail.com', password='$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK', lastName='Serre', address='85 rue Jean Jaures appt 05', city='Rochefort', zip='17300', phone='0619457854', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:12:41,112 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:12:41,296 DEBUG paymybuddy.UserService [main] user added
+2021-01-20 14:12:41,433 INFO paymybuddy.UserController [main] User registered sucessfully User{id='15',firstName='Emil', email='emilito@smite.com', password='$2a$10$I6plCK9wdetbzIEkPB8PTugXYsh79JDmVGgZnyaq0P/T3olVDy.oy', lastName='Starman', address='15 rue des mimosas', city='Frankfurt', zip='654485', phone='0102030405', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:16:33,665 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:16:33,845 DEBUG paymybuddy.UserService [main] user added
+2021-01-20 14:16:33,937 INFO paymybuddy.UserController [main] User registered sucessfully User{id='16',firstName='Emil', email='emilito@smite.com', password='$2a$10$abe2ql8babAerZ7GLz1f.O6eyMPgF9R67GBpKpKXxnPYfKks5HCc6', lastName='Starman', address='15 rue des mimosas', city='Frankfurt', zip='654485', phone='0102030405', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:16:34,050 INFO paymybuddy.UserController [main] Delete user with email emilito@smite.com
+2021-01-20 14:17:25,440 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:17:25,650 DEBUG paymybuddy.UserService [main] user added
+2021-01-20 14:17:25,798 INFO paymybuddy.UserController [main] User registered sucessfully User{id='17',firstName='Emil', email='emilito@smite.com', password='$2a$10$zLDkSFz.ZEK3jdMHOAJkhO6NNJNlEKFVTMLNXEEInsVoIcvERn3LK', lastName='Starman', address='15 rue des mimosas', city='Frankfurt', zip='654485', phone='0102030405', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:19:07,294 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:19:07,465 DEBUG paymybuddy.UserService [main] user added
+2021-01-20 14:19:07,601 INFO paymybuddy.UserController [main] User registered sucessfully User{id='18',firstName='Emil', email='emilito@smite.com', password='$2a$10$sWTm4XQBPVF8rBGpe/mGcubFPzI0.jZvMVoOIVhmencsBbnT7wV56', lastName='Starman', address='15 rue des mimosas', city='Frankfurt', zip='654485', phone='0102030405', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:19:07,696 INFO paymybuddy.UserController [main] Delete user with email emilito@smite.com
+2021-01-20 14:20:38,859 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:20:39,062 DEBUG paymybuddy.UserService [main] user added
+2021-01-20 14:20:39,191 INFO paymybuddy.UserController [main] User registered sucessfully User{id='19',firstName='Emil', email='emilito@smite.com', password='$2a$10$8gpO1p3VSI3Mrj0Seam35eBVtsNYM/kR9yUEcsENRFqZ.nu1gD2MC', lastName='Starman', address='15 rue des mimosas', city='Frankfurt', zip='654485', phone='0102030405', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:21:19,165 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:21:19,393 DEBUG paymybuddy.UserService [main] user added
+2021-01-20 14:21:19,492 INFO paymybuddy.UserController [main] User registered sucessfully User{id='20',firstName='Emil', email='emilito@smite.com', password='$2a$10$UAlggRGsfA2SWvn2pwRKl.kRGth.ZdpuPHrFClEWKTqcvqUKQTqEK', lastName='Starman', address='15 rue des mimosas', city='Frankfurt', zip='654485', phone='0102030405', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:21:28,528 INFO paymybuddy.UserController [main] Delete user with email emilito@smite.com
+2021-01-20 14:22:10,809 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:22:10,990 DEBUG paymybuddy.UserService [main] user added
+2021-01-20 14:22:11,056 INFO paymybuddy.UserController [main] User registered sucessfully User{id='21',firstName='Emil', email='emilito@smite.com', password='$2a$10$AFgnzWULpl.P2t4OtK1EQOmj9BmhSTQc4De5rzs4HBDz0xCBPVSb2', lastName='Starman', address='15 rue des mimosas', city='Frankfurt', zip='654485', phone='0102030405', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:22:11,195 INFO paymybuddy.UserController [main] Delete user with email emilito@smite.com
+2021-01-20 14:22:41,324 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:22:41,508 DEBUG paymybuddy.UserService [main] user added
+2021-01-20 14:22:41,581 INFO paymybuddy.UserController [main] User registered sucessfully User{id='22',firstName='Emil', email='emilito@smite.com', password='$2a$10$JiiZuPXWTHgBLdNCzrB9luw6ctj1NyRrFPze0MOT3Hoj9wXwNUX72', lastName='Starman', address='15 rue des mimosas', city='Frankfurt', zip='654485', phone='0102030405', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:22:41,710 INFO paymybuddy.UserController [main] Delete user with email emilito@smite.com
+2021-01-20 14:23:02,658 DEBUG paymybuddy.FriendListServiceImpl [main] Entering deleteFriend
+2021-01-20 14:23:02,670 DEBUG paymybuddy.FriendListServiceImpl [main] Entering deleteFriend
+2021-01-20 14:23:02,671 DEBUG paymybuddy.FriendListServiceImpl [main] friend relationship deleted
+2021-01-20 14:23:02,673 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-20 14:23:02,673 DEBUG paymybuddy.FriendListServiceImpl [main] friend added
+2021-01-20 14:23:02,675 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-20 14:23:02,675 DEBUG paymybuddy.FriendListServiceImpl [main] error while adding friend
+2021-01-20 14:23:02,677 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-20 14:23:02,677 DEBUG paymybuddy.FriendListServiceImpl [main] error while adding friend
+2021-01-20 14:23:02,701 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:23:02,701 DEBUG paymybuddy.UserService [main] user added
+2021-01-20 14:23:02,703 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:23:02,703 DEBUG paymybuddy.UserService [main] user already registered
+2021-01-20 14:23:02,724 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering deleteTransaction
+2021-01-20 14:23:02,724 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-20 14:23:02,728 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering saveTransaction
+2021-01-20 14:23:02,730 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Sender balance set
+2021-01-20 14:23:02,742 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Receiver balance set
+2021-01-20 14:23:02,742 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] MoneyTransaction saved
+2021-01-20 14:23:02,746 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering saveTransaction
+2021-01-20 14:23:02,747 ERROR paymybuddy.MoneyTransactionServiceImpl [main] Not enough fund excception. Sender hast not enough money for this transfert
+2021-01-20 14:23:02,751 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering withdrawMoney
+2021-01-20 14:23:02,752 ERROR paymybuddy.MoneyTransactionServiceImpl [main] Not enough fund exception. Sender hast not enough money for this transfert
+2021-01-20 14:23:02,755 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering findAllTransactionsForOneUser
+2021-01-20 14:23:02,755 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Return transactions
+2021-01-20 14:23:02,757 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering deleteTransactions
+2021-01-20 14:23:02,758 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-20 14:23:02,758 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-20 14:23:02,758 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-20 14:23:02,758 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-20 14:23:02,758 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transactions deleted
+2021-01-20 14:23:02,762 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering withdrawMoney
+2021-01-20 14:23:02,763 ERROR paymybuddy.MoneyTransactionServiceImpl [main] Cant not withdraw money with receiver and sender differents
+2021-01-20 14:23:06,451 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-20 14:23:06,593 DEBUG paymybuddy.FriendListServiceImpl [main] friend added
+2021-01-20 14:23:06,722 INFO paymybuddy.FriendListController [main] Added Friend relationship for user n# 4 and 1
+2021-01-20 14:23:06,749 DEBUG paymybuddy.FriendListServiceImpl [main] Entering deleteFriend
+2021-01-20 14:23:06,760 DEBUG paymybuddy.FriendListServiceImpl [main] friend relationship deleted
+2021-01-20 14:23:06,865 INFO paymybuddy.FriendListController [main] Deleted Friend relationship for user n# 4 and 1
+2021-01-20 14:23:06,878 INFO paymybuddy.FriendListController [main] Friend List returned for userId 4
+2021-01-20 14:23:06,879 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-20 14:23:06,882 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-20 14:23:06,891 INFO paymybuddy.FriendListController [main] Friend List returned for userId 4
+2021-01-20 14:23:06,892 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-20 14:23:06,893 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-20 14:23:06,904 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-20 14:23:06,906 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-20 14:23:06,911 DEBUG paymybuddy.FriendListServiceImpl [main] Entering deleteFriend
+2021-01-20 14:23:06,923 INFO paymybuddy.ExceptionHandling [main] DELETE /friends No friendship found
+2021-01-20 14:23:06,928 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Wed Jan 20 14:23:06 CET 2021, status=400, error='No friendship found', path='/friends'}
+2021-01-20 14:23:06,958 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-20 14:23:06,963 INFO paymybuddy.ExceptionHandling [main] POST /friends You are already friends
+2021-01-20 14:23:06,963 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Wed Jan 20 14:23:06 CET 2021, status=400, error='You are already friends', path='/friends'}
+2021-01-20 14:23:06,971 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-20 14:23:06,976 INFO paymybuddy.ExceptionHandling [main] POST /friends You are already friends
+2021-01-20 14:23:06,976 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Wed Jan 20 14:23:06 CET 2021, status=400, error='You are already friends', path='/friends'}
+2021-01-20 14:23:06,981 INFO paymybuddy.FriendListController [main] Friend List returned for userId 3
+2021-01-20 14:23:06,982 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-20 14:23:06,991 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-20 14:23:07,000 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-20 14:23:07,005 DEBUG paymybuddy.FriendListServiceImpl [main] friend added
+2021-01-20 14:23:07,087 INFO paymybuddy.FriendListController [main] Added Friend relationship for user n# 4 and 1
+2021-01-20 14:23:07,088 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-20 14:23:07,092 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-20 14:23:07,093 DEBUG paymybuddy.FriendListServiceImpl [main] Entering deleteFriend
+2021-01-20 14:23:07,099 DEBUG paymybuddy.FriendListServiceImpl [main] friend relationship deleted
+2021-01-20 14:23:07,196 INFO paymybuddy.FriendListController [main] Deleted Friend relationship for user n# 4 and 1
+2021-01-20 14:23:07,239 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering saveTransaction
+2021-01-20 14:23:07,241 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Sender balance set
+2021-01-20 14:23:07,241 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Receiver balance set
+2021-01-20 14:23:07,245 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] MoneyTransaction saved
+2021-01-20 14:23:07,304 INFO paymybuddy.MoneyTransactionController [main] transactionsaved
+2021-01-20 14:23:07,315 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering deleteTransaction
+2021-01-20 14:23:07,320 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-20 14:23:07,476 INFO paymybuddy.MoneyTransactionController [main] transaction deleted
+2021-01-20 14:23:07,477 DEBUG paymybuddy.UserService [main] saving user
+2021-01-20 14:23:07,485 DEBUG paymybuddy.UserService [main] user saved
+2021-01-20 14:23:07,646 DEBUG paymybuddy.UserService [main] saving user
+2021-01-20 14:23:07,648 DEBUG paymybuddy.UserService [main] user saved
+2021-01-20 14:23:07,830 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering withdrawMoney
+2021-01-20 14:23:07,832 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Receiver balance set
+2021-01-20 14:23:07,834 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] MoneyTransaction saved
+2021-01-20 14:23:08,036 INFO paymybuddy.MoneyTransactionController [main] transaction saved
+2021-01-20 14:23:08,039 DEBUG paymybuddy.UserService [main] saving user
+2021-01-20 14:23:08,040 DEBUG paymybuddy.UserService [main] user saved
+2021-01-20 14:23:08,314 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering deleteTransaction
+2021-01-20 14:23:08,315 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transaction deleted
+2021-01-20 14:23:09,029 INFO paymybuddy.MoneyTransactionController [main] transaction deleted
+2021-01-20 14:23:09,034 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering saveTransaction
+2021-01-20 14:23:09,037 ERROR paymybuddy.MoneyTransactionServiceImpl [main] Not enough fund excception. Sender hast not enough money for this transfert
+2021-01-20 14:23:09,038 INFO paymybuddy.ExceptionHandling [main] POST /moneyTransaction/ Not Enough funds
+2021-01-20 14:23:09,038 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Wed Jan 20 14:23:09 CET 2021, status=400, error='Not Enough funds', path='/moneyTransaction/'}
+2021-01-20 14:23:09,043 INFO paymybuddy.MoneyTransactionController [main] returning transactions
+2021-01-20 14:23:09,044 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering findAllTransactionsForOneUser
+2021-01-20 14:23:09,048 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Return transactions
+2021-01-20 14:23:09,056 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering withdrawMoney
+2021-01-20 14:23:09,058 ERROR paymybuddy.MoneyTransactionServiceImpl [main] Cant not withdraw money with receiver and sender differents
+2021-01-20 14:23:09,059 INFO paymybuddy.ExceptionHandling [main] POST /moneyTransaction/withdraw Cant withdraw funds.
+2021-01-20 14:23:09,059 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Wed Jan 20 14:23:09 CET 2021, status=400, error='Cant withdraw funds.', path='/moneyTransaction/withdraw'}
+2021-01-20 14:23:09,103 INFO paymybuddy.ExceptionHandling [main] DELETE /users Can't delete account there is still fund to withdraw.
+2021-01-20 14:23:09,103 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Wed Jan 20 14:23:09 CET 2021, status=400, error='Can't delete account there is still fund to withdraw.', path='/users'}
+2021-01-20 14:23:09,109 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:23:09,170 DEBUG paymybuddy.UserService [main] user added
+2021-01-20 14:23:09,244 INFO paymybuddy.UserController [main] User registered sucessfully User{id='23',firstName='Emil', email='emilito@smite.com', password='$2a$10$qQYLQioyEmYXg6e5716GR.13JCI3KfT5OpcVC6iNZLcJn9QvDIp5y', lastName='Starman', address='15 rue des mimosas', city='Frankfurt', zip='654485', phone='0102030405', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:23:10,033 INFO paymybuddy.UserController [main] Delete user with email emilito@smite.com
+2021-01-20 14:23:10,042 DEBUG paymybuddy.UserService [main] adding user
+2021-01-20 14:23:10,044 DEBUG paymybuddy.UserService [main] user already registered
+2021-01-20 14:23:10,044 INFO paymybuddy.UserController [main] Email already known geff1982@gmail.com
+2021-01-20 14:23:10,048 DEBUG paymybuddy.UserService [main] saving user
+2021-01-20 14:23:10,050 DEBUG paymybuddy.UserService [main] user saved
+2021-01-20 14:23:10,133 INFO paymybuddy.UserController [main] User successfully modified User{id='1',firstName='Geff', email='maildetest@test.fr', password='$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK', lastName='Serre', address='85 rue Jean Jaures appt 05', city='Rochefort', zip='17300', phone='0619457854', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:23:10,135 DEBUG paymybuddy.UserService [main] saving user
+2021-01-20 14:23:10,136 DEBUG paymybuddy.UserService [main] user saved
+2021-01-20 14:23:10,232 INFO paymybuddy.UserController [main] User successfully modified User{id='1',firstName='Geff', email='geff1982@gmail.com', password='$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK', lastName='Serre', address='85 rue Jean Jaures appt 05', city='Rochefort', zip='17300', phone='0619457854', birthDate=1982-04-14, treasury=0.0}
+2021-01-20 14:23:10,332 INFO paymybuddy.UserController [main] Delete user with email geff1982@gmail.com
+2021-01-20 14:23:10,333 DEBUG paymybuddy.UserService [main] saving user
+2021-01-20 14:23:10,334 DEBUG paymybuddy.UserService [main] user saved
+2021-01-20 14:23:10,432 INFO paymybuddy.UserController [main] User successfully modified User{id='1',firstName='Geff', email='geff1982@gmail.com', password='$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK', lastName='Serre', address='85 rue Jean Jaures appt 05', city='Rochefort', zip='17300', phone='0619457854', birthDate=1982-04-14, treasury=0.0}
