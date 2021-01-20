@@ -4,7 +4,6 @@ import com.paymybuddy.app.model.MoneyTransaction;
 import com.paymybuddy.app.model.User;
 import com.paymybuddy.app.service.MoneyTransactionService;
 import com.paymybuddy.app.service.UserService;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +31,7 @@ class MoneyTransactionControllerIT {
 
   @Autowired
   UserService userService;
-
-
+  
   @Autowired
   private WebApplicationContext wac;
 
@@ -61,10 +59,10 @@ class MoneyTransactionControllerIT {
     assertEquals(100, user1.getTreasury());
     assertEquals(444.75, user2.getTreasury());
 
-    MoneyTransaction todelete = moneyTransactionService.findMoneyTransactionByDescription("Test");
-    moneyTransactionService.deleteTransaction(todelete.getId());
+    MoneyTransaction toDelete = moneyTransactionService.findMoneyTransactionByDescription("Test");
+    moneyTransactionController.deleteTransaction(toDelete.getId());
 
-    //Reset user's treasury as they were before this test
+    //Reset user's treasury as it was before this test
     user1.setTreasury(user1.getTreasury() - 100);
     user2.setTreasury(user2.getTreasury() + 100);
     userService.saveUser(user1);
@@ -107,14 +105,16 @@ class MoneyTransactionControllerIT {
     this.mockMvc.perform(post("/moneyTransaction/withdraw").contentType(MediaType.APPLICATION_JSON)
             .content(request))
             .andExpect(status().is(200));
+
     user = userService.findUserById(2);
     assertEquals(treasury-100, user.getTreasury());
 
     //reset Db as it were initially
     user.setTreasury(544.75);
     userService.saveUser(user);
-    MoneyTransaction todelete = moneyTransactionService.findMoneyTransactionByDescription("Test");
-    moneyTransactionService.deleteTransaction(todelete.getId());
+    MoneyTransaction toDelete = moneyTransactionService.findMoneyTransactionByDescription("Test");
+    moneyTransactionController.deleteTransaction(toDelete.getId());
+
 
   }
 

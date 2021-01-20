@@ -28,11 +28,23 @@ public class MoneyTransactionController {
     logger.info("returning transactions");
     return moneyTransaction.findAllTransactionsForOneUser(id);
   }
+  @GetMapping("/moneyTransaction/desc")
+  public MoneyTransaction getMoneyTransactionForADescription(@RequestParam String description) {
+    logger.info("returning transactions");
+    return moneyTransaction.findMoneyTransactionByDescription(description);
+  }
 
   @PostMapping(value = "/moneyTransaction/withdraw")
   public void withdrawMoney(@RequestBody MoneyTransaction moneyTransfert) {
     moneyTransaction.withdrawMoney(moneyTransfert);
-    logger.info("transactionsaved");
+    logger.info("transaction saved");
+
+  }
+
+  @DeleteMapping(value = "/moneyTransaction")
+  public void deleteTransaction(@RequestParam int id) {
+    moneyTransaction.deleteTransaction(id);
+    logger.info("transaction deleted");
 
   }
 

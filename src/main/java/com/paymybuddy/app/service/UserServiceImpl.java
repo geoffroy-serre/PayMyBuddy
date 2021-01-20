@@ -69,6 +69,11 @@ public class UserServiceImpl implements UserService {
     if (user.getTreasury() > 0) {
       throw new StillFundOnAccountException();
     }
+    if(moneyTransactionRepository.findMoneyTransactionByIdSender(user.getId())==null
+            || moneyTransactionRepository.findMoneyTransactionByIdReceiver(user.getId())==null ){
+      deleteUserWithNoTransaction(email);
+      return true;
+    }
     user.setPassword("gS)e+<gSh]dvZ<qGYM>/HbmfxcYF+M:Gfds}@ma`h?k[*2?2ngwm8[K2/V7M^vj3tKE~g{u5b2g" +
             ".qBG_UB");
     user.setZip("Deleted");

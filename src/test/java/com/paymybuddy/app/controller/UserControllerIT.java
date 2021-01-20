@@ -2,7 +2,6 @@ package com.paymybuddy.app.controller;
 
 import com.paymybuddy.app.model.User;
 import com.paymybuddy.app.service.UserService;
-import java.time.LocalDate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +29,7 @@ public class UserControllerIT {
 
   @Autowired
   private WebApplicationContext wac;
+
 
   private MockMvc mockMvc;
 
@@ -69,17 +69,7 @@ public class UserControllerIT {
 
   @Test
   void addUser() throws Exception {
-    User newUser = new User();
-    newUser.setLastName("Starman");
-    newUser.setFirstName("Emil");
-    newUser.setTreasury(0.0);
-    newUser.setAddress("15 rue des mimosas");
-    newUser.setEmail("emilito@smite.com");
-    newUser.setPhone("0102030405");
-    newUser.setCity("Frankfurt");
-    newUser.setPassword("weshnioupass45");
-    newUser.setZip("654485");
-    newUser.setBirthDate(LocalDate.of(1880, 05, 12));
+
 
     String jsonRequest = "{ \"firstName\":\"Emil\",\"lastName\":\"Starman\"," +
             "\"email\":\"emilito@smite.com\"," +
@@ -92,8 +82,10 @@ public class UserControllerIT {
             .content(jsonRequest))
             .andExpect(status().is(200));
 
+    this.mockMvc.perform(delete("/users").contentType(MediaType.APPLICATION_JSON)
+            .param("email","emilito@smite.com"))
+            .andExpect(status().is(200));
 
-    userService.deleteUserWithNoTransaction(newUser.getEmail());
 
   }
 
@@ -153,7 +145,6 @@ public class UserControllerIT {
     this.mockMvc.perform(delete("/users").contentType(MediaType.APPLICATION_JSON)
             .param("email", "adapting@smite.com"))
             .andExpect(status().is(400));
-
 
   }
 
