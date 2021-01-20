@@ -639,3 +639,7 @@
 2021-01-20 14:26:11,381 DEBUG paymybuddy.UserService [main] user added
 2021-01-20 14:26:11,454 INFO paymybuddy.UserController [main] User registered sucessfully User{id='24',firstName='Emil', email='emilito@smite.com', password='$2a$10$OcpPR.QM4JaXMVfHVeSGbeGW0NklRuqXMPLLZaM7k.KmwP5dSjHwq', lastName='Starman', address='15 rue des mimosas', city='Frankfurt', zip='654485', phone='0102030405', birthDate=1982-04-14, treasury=0.0}
 2021-01-20 14:26:11,551 INFO paymybuddy.UserController [main] Delete user with email emilito@smite.com
+2021-01-20 14:29:42,513 INFO paymybuddy.UserController [main] Delete user with email geff1982@gmail.com
+2021-01-20 14:29:42,568 DEBUG paymybuddy.UserService [main] saving user
+2021-01-20 14:29:42,576 DEBUG paymybuddy.UserService [main] user saved
+2021-01-20 14:29:42,683 INFO paymybuddy.UserController [main] User successfully modified User{id='1',firstName='Geff', email='geff1982@gmail.com', password='$2a$10$byLuIRvPZJp2aD8FeOh2oOu0sxn1IZWcILDTC3vPm.rEv8QKAaAgK', lastName='Serre', address='85 rue Jean Jaures appt 05', city='Rochefort', zip='17300', phone='0619457854', birthDate=1982-04-14, treasury=0.0}
