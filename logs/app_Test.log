@@ -31,3 +31,37 @@
 2021-01-23 12:15:57,854 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Transactions deleted
 2021-01-23 12:15:57,856 DEBUG paymybuddy.MoneyTransactionServiceImpl [main] Entering withdrawMoney
 2021-01-23 12:15:57,856 ERROR paymybuddy.MoneyTransactionServiceImpl [main] Cant not withdraw money with receiver and sender differents
+2021-01-23 12:26:36,115 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-23 12:26:36,276 DEBUG paymybuddy.FriendListServiceImpl [main] friend added
+2021-01-23 12:26:36,391 INFO paymybuddy.FriendListController [main] Added Friend relationship for user n# 4 and 1
+2021-01-23 12:26:36,422 DEBUG paymybuddy.FriendListServiceImpl [main] Entering deleteFriend
+2021-01-23 12:26:36,432 DEBUG paymybuddy.FriendListServiceImpl [main] friend relationship deleted
+2021-01-23 12:26:36,547 INFO paymybuddy.FriendListController [main] Deleted Friend relationship for user n# 4 and 1
+2021-01-23 12:26:36,561 INFO paymybuddy.FriendListController [main] Friend List returned for userId 4
+2021-01-23 12:26:36,562 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-23 12:26:36,565 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-23 12:26:36,579 INFO paymybuddy.FriendListController [main] Friend List returned for userId 4
+2021-01-23 12:26:36,580 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-23 12:26:36,581 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-23 12:26:36,593 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-23 12:26:36,594 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-23 12:26:36,599 DEBUG paymybuddy.FriendListServiceImpl [main] Entering deleteFriend
+2021-01-23 12:26:36,609 INFO paymybuddy.ExceptionHandling [main] DELETE /friends No friendship found
+2021-01-23 12:26:36,615 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Sat Jan 23 12:26:36 CET 2021, status=400, error='No friendship found', path='/friends'}
+2021-01-23 12:26:36,640 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-23 12:26:36,646 INFO paymybuddy.ExceptionHandling [main] POST /friends You are already friends
+2021-01-23 12:26:36,647 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Sat Jan 23 12:26:36 CET 2021, status=400, error='You are already friends', path='/friends'}
+2021-01-23 12:26:36,652 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-23 12:26:36,658 INFO paymybuddy.ExceptionHandling [main] POST /friends You are already friends
+2021-01-23 12:26:36,658 ERROR paymybuddy.ExceptionHandling [main] ERROR: ExceptionResponse{timestamp=Sat Jan 23 12:26:36 CET 2021, status=400, error='You are already friends', path='/friends'}
+2021-01-23 12:26:36,664 INFO paymybuddy.FriendListController [main] Friend List returned for userId 3
+2021-01-23 12:26:36,664 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-23 12:26:36,671 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-23 12:26:36,679 DEBUG paymybuddy.FriendListServiceImpl [main] entering addfriend method
+2021-01-23 12:26:36,684 DEBUG paymybuddy.FriendListServiceImpl [main] friend added
+2021-01-23 12:26:36,735 INFO paymybuddy.FriendListController [main] Added Friend relationship for user n# 4 and 1
+2021-01-23 12:26:36,736 DEBUG paymybuddy.FriendListServiceImpl [main] Entering findFriends
+2021-01-23 12:26:36,740 DEBUG paymybuddy.FriendListServiceImpl [main] List of Friend returned
+2021-01-23 12:26:36,742 DEBUG paymybuddy.FriendListServiceImpl [main] Entering deleteFriend
+2021-01-23 12:26:36,747 DEBUG paymybuddy.FriendListServiceImpl [main] friend relationship deleted
+2021-01-23 12:26:36,860 INFO paymybuddy.FriendListController [main] Deleted Friend relationship for user n# 4 and 1
