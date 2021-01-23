@@ -69,6 +69,11 @@ As Tomcat is embbeded, you can launch directly the *.jar with
 ```bash
 java -jar {nameOfTheFile}.jar
 ```
+If you uncomment the line in application.properties to enable launch with environnement variable 
+to launch the .jar with the password for jsypt so type
+```bash
+JASYPT_ENCRYPTOR_PASSWORD=jesecureunedbcommejepeut -jar {nameOfTheFile}.jar
+```
 
 ## 2. Endpoints
 
